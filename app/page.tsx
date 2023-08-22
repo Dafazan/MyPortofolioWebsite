@@ -74,7 +74,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            I would recommend text him first, don't do voice call unless it's urgent.
+            I would recommend text him first, do not do voice call unless it is urgent.
           </p>
         </a>
 
