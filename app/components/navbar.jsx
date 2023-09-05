@@ -24,10 +24,10 @@ function NavbarCustom() {
                                     <a href="#" class="text-white hover:underline" aria-current="page">Home</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-white hover:underline">Portofolio</a>
+                                    <a href="/portofolio" class="text-white hover:underline">Portofolio</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-white hover:underline">Contact</a>
+                                    <a href="/about" class="text-white hover:underline">Contact</a>
                                 </li>
                             </ul>
                         </div>
