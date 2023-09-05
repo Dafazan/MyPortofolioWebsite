@@ -4,7 +4,7 @@ function NavbarCustom() {
     return (
         <>
 
-            <div className='fixed w-full'>
+            <div className='fixed w-full z-10'>
                 <nav class="border-gray-20 bg-gray-900">
                     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
                         <a href="https://dafazan.my.id" class="flex items-center">
@@ -12,8 +12,7 @@ function NavbarCustom() {
 
                         </a>
                         <div class="flex items-center">
-                            <a href="tel:5541251234" class="mr-6 text-sm  text-white hover:underline">(62) 858-6471 4906</a>
-                            <a href="#" class="text-sm  text-blue-500 hover:underline">Contact</a>
+                            <a href="https://wa.me/6285864714906" class="mr-6 text-sm  text-white hover:underline">(62) 858-6471 4906</a>
                         </div>
                     </div>
                 </nav>
@@ -25,13 +24,10 @@ function NavbarCustom() {
                                     <a href="#" class="text-white hover:underline" aria-current="page">Home</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-white hover:underline">Company</a>
+                                    <a href="#" class="text-white hover:underline">Portofolio</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-white hover:underline">Team</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-white hover:underline">Features</a>
+                                    <a href="#" class="text-white hover:underline">Contact</a>
                                 </li>
                             </ul>
                         </div>
