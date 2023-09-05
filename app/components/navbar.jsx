@@ -12,7 +12,7 @@ function NavbarCustom() {
 
                         </a>
                         <div class="flex items-center">
-                            <a href="https://wa.me/6285864714906" class="mr-6 text-sm  text-white hover:underline">(62) 858-6471 4906</a>
+                            <a className='text-[#45FFCA]' href="https://wa.me/6285864714906" class="mr-6 text-sm  text-white hover:underline">(62) 858-6471 4906</a>
                         </div>
                     </div>
                 </nav>
@@ -21,13 +21,13 @@ function NavbarCustom() {
                         <div class="flex items-center">
                             <ul class="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
                                 <li>
-                                    <a href="/" class="text-white hover:underline" aria-current="page">Home</a>
+                                    <a href="/" class="text-white hover:underline hover:text-[#45FFCA]" aria-current="page">Home</a>
                                 </li>
                                 <li>
-                                    <a href="/portofolio" class="text-white hover:underline">Portofolio</a>
+                                    <a href="/portofolio" class="text-white hover:underline hover:text-[#45FFCA]">Portofolio</a>
                                 </li>
                                 <li>
-                                    <a href="/about" class="text-white hover:underline">Contact</a>
+                                    <a href="/about" class="text-white hover:underline hover:text-[#45FFCA]">Contact</a>
                                 </li>
                             </ul>
                         </div>

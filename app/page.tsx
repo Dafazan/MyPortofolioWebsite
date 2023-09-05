@@ -1,127 +1,52 @@
 'use client'
 import Image from 'next/image'
-import { LogoCanvas } from '../app/components/canvas/logo';
 import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import CardInfo from '../app/components/frontcard';
 
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main >
+      <div className=' w-screen md:h-[100px] h-[70px]'> </div>
+      <div className=' w-screen bg-gray-900 md:flex'>
+        <div className=' md:w-2/6 w-full '>
+          <div className='sm:me-20 md:ms-40 md:m-10 m-10'>
+            <img className='' src="logoM.png" alt="" />
+          </div>
+        </div>
+        <div className='md:w-4/6 w-full'>
+          <div className='sm:me-20 md:me-40 md:m-10 m-10'>
+            <p className='text-[#45FFCA] '>Hi, My name is</p>
+            <p className='md:text-7xl text-4xl font-bold'>M. Daffa Fauzan</p>
+            <br />
+            <p className='md:text-white text-[#45FFCA] md:text-6xl text-3xl font-semibold hover:text-gray-900 hover:bg-[#45FFCA] pb-3'>Designer.</p>
+            <p className='md:text-white text-[#45FFCA] md:text-6xl text-3xl font-semibold hover:text-gray-900 hover:bg-[#45FFCA] md:pb-3 pb-10'>Software Engineer.</p>
+            {/* <div className='pt-5'>
+              <p className='md:text-2xl text-1xl'>Development</p>
+              <p className='md:text-3xl text-2xl text-[#64CCC5]'>Game - Website - Mobile</p>
+            </div>
+            <div className="pt-5 pb-10">
+              <p className='md:text-2xl text-1xl'>Design</p>
+              <p className='md:text-3xl text-[#64CCC5]'>3D - 2D - UI/UX</p>
+            </div> */}
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left pt-10">
-        <a
-          href="https://www.instagram.com/dafazan_/"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Visit Instagram{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Follow him on instagram.
-          </p>
-        </a>
-
-        <a
-          href="https://dafazan.artstation.com/"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Visit Artstation{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            See his 3D artwork on Artstation
-          </p>
-        </a>
-
-        <a
-          href="https://wa.me/6285864714906"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Call Him{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            I would recommend text him first, do not do voice call unless it is urgent.
-          </p>
-        </a>
-
-        <a
-          href="https://www.instagram.com/dafazanlbs"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Another IG{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            This one is his other instagram account where he post his 3D artwork.
-          </p>
-        </a>
+          </div>
+        </div>
       </div>
+
+      <div className="flex flex-col p-10 md:pt-10 pt-0 sm:ps-20 sm:pe-20 md:ps-40 md:pe-40">
+        <p className='text-4xl font-semibold pb-5'>Portofolio</p>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center gap-3'>
+          <CardInfo />
+          <CardInfo />
+          <CardInfo />
+          <CardInfo />
+          <CardInfo />
+        </div>
+      </div>
+
+
+
     </main>
-
-    //   <div className="h-[600px] sm:h-screen md:h-screen py-5 md:py-20 text-indigo-100 z-10 relative">
-    //     <div className="h-full  mx-auto md:flex md:items-center md:justify-between">
-    //       <div className="w-full mt-20 sm:mb-10 mb-20 md:h-full md:w-1/2 md:mb-0 md:ml-16 sm:mt-10  md:mt-48  text-center">
-
-    //         Kedai Kopi Launam.
-
-    //       </div>
-
-    //     </div>
-
-    //     <div>
-    //       <div className="w-full h-full mb-16 mt-5 justify-center col-start-2 text-center">
-
-    //         Menu Terbaru.
-
-    //       </div>
-    //       <div className="flex justify-evenly">
-    //         <LogoCanvas />
-    //       </div>
-    //     </div>
-    //     <div>
-    //       <div className="w-full h-full mb-16 mt-32 justify-center col-start-2 text-center">
-
-    //         Promo.
-
-    //         Berbagai promo di Launam Coffee.
-
-    //       </div>
-
-    //     </div>
-    //     <div className="h-9/12 container mx-auto md:flex md:items-center md:justify-between">
-    //       <div className="w-full h-full mb-40 mt-40 md:mt-80 md:mb-56 justify-center">
-
-    //         Yuk Ngop
-    //         Launam Coffe.
-
-    //       </div>
-    //     </div>
-
-    //   </div>
-
-    // );
   )
 }
