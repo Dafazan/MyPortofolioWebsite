@@ -21,7 +21,7 @@ function NavbarCustom() {
                         <div class="flex items-center">
                             <ul class="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
                                 <li>
-                                    <a href="#" class="text-white hover:underline" aria-current="page">Home</a>
+                                    <a href="/" class="text-white hover:underline" aria-current="page">Home</a>
                                 </li>
                                 <li>
                                     <a href="/portofolio" class="text-white hover:underline">Portofolio</a>
