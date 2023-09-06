@@ -1,10 +1,11 @@
 import './globals.css'
+import Head from 'next/head';
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Sofia_Sans } from 'next/font/google'
 import * as THREE from 'three';
 import NavbarCustom from '../app/components/navbar';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Sofia_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Dafazan',
