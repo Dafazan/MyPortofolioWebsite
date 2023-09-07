@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import React, { Suspense } from "react";
 import CardInfo from '../app/components/frontcard';
-
+import Splide from '@splidejs/splide'
 
 export default function Home() {
   return (
