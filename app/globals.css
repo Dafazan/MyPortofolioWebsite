@@ -23,3 +23,29 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   font-family: 'Sofia Sans', sans-serif;
 }
+
+.bgl {
+  background: rgb(20, 26, 41);
+}
+
+.bgd {
+  background: rgb(12, 15, 26);
+}
+
+.bgdl {
+  background: rgb(32, 43, 55);
+}
+
+.bglb {
+  background: rgb(0,
+      240,
+      255);
+}
+
+.txt1 {
+  color: rgb(0, 240, 255);
+}
+
+.txt1d {
+  color: rgb(0, 116, 123);
+}
