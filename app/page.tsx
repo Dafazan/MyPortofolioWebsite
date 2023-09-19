@@ -3,8 +3,20 @@ import Image from 'next/image'
 import React, { Suspense } from "react";
 import CardInfo from '../app/components/frontcard';
 import Splide from '@splidejs/splide'
+import { useState } from 'react';
+import CyberlabsDesc from '../app/components/workplaces/cyberlabs'
+import SaptalokaDesc from '../app/components/workplaces/saptaloka'
+import EmptyDesc from '../app/components/workplaces/empty'
+import ProjokDesc from '../app/components/workplaces/projok'
+
 
 export default function Home() {
+  const components = [
+    // eslint-disable-next-line react/jsx-key
+    <p>No Data</p>
+
+  ]
+  const [comp, setComp] = useState(0);
   return (
     <main >
 
@@ -35,8 +47,21 @@ export default function Home() {
       <div id='aboutme' className="w-screen h-[100px] bgl"></div>
 
       <div className='bgd md:px-20 p-10'>
-        <div className='bg-red-900 md:flex'>
-          <div className='md:w-8/12 bg-green-300'>About me</div>
+        <div>
+          <p className='txt1 text-4xl md:text-6xl py-5'>About Me</p>
+        </div>
+        <div className=' md:flex'>
+          <div className='md:w-8/12 md:text-2xl md:flex'>
+            <div className=''>
+              <p>Hello There, My name is Daffa, and I&rsquo;m passionate about 3D design, Game developing and Website developing. I&rsquo;m graduated as a Software Engineer at a Vocational High School. I found my passion in the field of Designing and Developing when I was studying in Mid school then I decided to take a Software Engineer Vocational High School.
+
+              </p>
+              <br />
+              <p>I&rsquo;ve spending 4 years learning 3D Modelling as a hobby, and learn how to develop website at school for 3 years. As soon as I graduated from high school, I started to learn how to make a Game with Unity Game Engine. </p>
+            </div>
+            <div className='md:w-[300px] '></div>
+          </div>
+
           <div className='md:w-4/12 bg-red-800'>image</div>
         </div>
         <div className='bg-violet-400 mt-20'>
@@ -57,10 +82,32 @@ export default function Home() {
       </div>
 
       <div className='bgl md:px-20 p-10'>
-        <div className='bg-red-900'>Where ive worked</div>
-        <div className='bg-green-300 md:px-48 md:flex'>
-          <div className='bg-violet-800 md:w-3/12'>where</div>
-          <div className='bg-violet-400 md:w-9/12'>desc</div>
+        <div className='txt1 flex justify-center items-center text-center text-4xl md:text-6xl py-7'><p>Where I&rsquo;ve Worked</p></div>
+        <div className='md:px-48 md:flex'>
+          <div className=' md:w-3/12 flex-row md:py-5 duration-100 ease-in-out md:justify-end md:text-end'>
+            <div> <button onClick={() => setComp(0)} className={`${comp == 0 ? "text-xl txt1" : "txt1d duration-100 ease-in-out"}`}>Cyberlabs</button></div>
+            <div> <button onClick={() => setComp(1)} className={`${comp == 1 ? "text-xl txt1" : "txt1d duration-100 ease-in-out"}`}>Saptaloka Digital</button></div>
+            <div> <button onClick={() => setComp(2)} className={`${comp == 2 ? "text-xl txt1" : "txt1d duration-100 ease-in-out"}`}>Programmer Jongkok</button></div>
+
+          </div>
+          <div className=' md:w-9/12'>
+            <div className='bgd md:m-5 mt-3 p-3 min-h-[200px] rounded-xl'>
+              {
+                comp == 0 ?
+                  <CyberlabsDesc />
+                  : comp == 1 ?
+
+                    <SaptalokaDesc />
+                    : comp == 2 ?
+
+                      <ProjokDesc />
+                      : comp == 3 ?
+
+                        components[0] : false
+
+              }
+            </div>
+          </div>
         </div>
       </div>
 
