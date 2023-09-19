@@ -44,9 +44,9 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div id='aboutme' className="w-screen h-[100px] bgl"></div>
+      <div className="w-screen h-[100px] bgl"></div>
 
-      <div className='bgd md:px-20 p-10'>
+      <div id='aboutme' className='bgd md:px-20 p-10'>
         <div>
           <p className='txt1 text-4xl md:text-6xl py-5'>About Me</p>
         </div>
