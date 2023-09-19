@@ -51,7 +51,7 @@ export default function Home() {
           <p className='txt1 text-4xl md:text-6xl py-5'>About Me</p>
         </div>
         <div className=' md:flex'>
-          <div className='md:w-8/12 md:text-2xl md:flex'>
+          <div className='md:w-8/12 md:text-2xl md:flex text-justify md:text-start'>
             <div className=''>
               <p>Hello There, My name is Daffa, and I&rsquo;m passionate about 3D design, Game developing and Website developing. I&rsquo;m graduated as a Software Engineer at a Vocational High School. I found my passion in the field of Designing and Developing when I was studying in Mid school then I decided to take a Software Engineer Vocational High School.
 
