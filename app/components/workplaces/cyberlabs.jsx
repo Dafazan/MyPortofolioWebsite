@@ -8,7 +8,7 @@ function CyberlabsDesc() {
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0 }}
-                className='text-xl'>Full Stack Developer at <span className='txt1'><a href="https://cyberlabs.co.id/">Cyberlabs</a></span></motion.p>
+                className='text-xl'>Internship at <span className='txt1'><a href="https://cyberlabs.co.id/">Cyberlabs</a></span></motion.p>
             <motion.p
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}

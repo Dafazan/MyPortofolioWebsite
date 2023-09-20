@@ -1,6 +1,9 @@
+
 import React from 'react'
 
+
 function NavbarCustom() {
+
     return (
         <>
 
@@ -21,13 +24,13 @@ function NavbarCustom() {
                         <div class="flex items-center">
                             <ul class="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
                                 <li>
-                                    <a href="/" class="text-white hover:underline hover:text-[#45FFCA]" aria-current="page">Home</a>
+                                    <a href="/" class=" hover:underline hover:text-[#45FFCA]" aria-current="page">Home</a>
                                 </li>
                                 <li>
-                                    <a href="/portofolio" class="text-white hover:underline hover:text-[#45FFCA]">Portofolio</a>
+                                    <a href="/portofolio" class=" hover:underline hover:text-[#45FFCA]">Portofolio</a>
                                 </li>
                                 <li>
-                                    <a href="/about" class="text-white hover:underline hover:text-[#45FFCA]">Contact</a>
+                                    <a href="/about" class=" hover:underline hover:text-[#45FFCA]">Contact</a>
                                 </li>
                             </ul>
                         </div>
