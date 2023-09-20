@@ -50,3 +50,10 @@ body {
 .txt1d {
   color: rgb(0, 116, 123);
 }
+
+.sopay {
+
+  background-image: url('/S.png');
+  background-size: cover;
+
+}

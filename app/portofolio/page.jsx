@@ -3,6 +3,26 @@ import React from 'react'
 import { useState } from 'react';
 //translate-y-3 border-x-2 border-t-2 border-[#00F0FF]
 function Portofolio() {
+    const [img, setImg] = useState(0);
+    const handleClick = () => {
+        setImg((prevImg) => (prevImg === 4 ? 0 : prevImg + 1));
+    };
+    const handleClickr = () => {
+        setImg((prevImg) => (prevImg === 0 ? 4 : prevImg - 1));
+    };
+    let imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-red-500';
+
+    if (img === 0) {
+        imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-blue-500';
+    } else if (img === 1) {
+        imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-violet-500';
+    } else if (img === 2) {
+        imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-slate-400';
+    } else if (img === 3) {
+        imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-yellow-500';
+    }
+
+
     const components = [
         // eslint-disable-next-line react/jsx-key
         <p>No Data</p>
@@ -34,8 +54,20 @@ function Portofolio() {
                     </button>
                 </div>
             </div>
-            <div className='flex bgd mt-2 border-t-2 border-[#00F0FF]'>
-                things here
+            <div className='flex bgd mt-2 border-2 border-[#00F0FF] rounded-b-xl p-5 w-full'>
+                <div className='flex w-full'>
+                    <div className={imageSopay}>
+                        <div className='w-full h-full flex-grow'></div>
+                        <div className='flex'>
+                            <div className='w-1/12 bgl txt1 hover:text-2xl rounded-es-xl flex justify-center items-center text-'><button onClick={handleClickr}>&lt;</button></div>
+                            <div className='w-10/12 h-[30px]'></div>
+                            <div className='w-1/12 bgl txt1 hover:text-2xl rounded-ee-xl flex justify-center items-center text-'><button onClick={handleClick}>&gt;</button></div>
+                        </div>
+                    </div>
+
+
+                    <div>tulisan</div>
+                </div>
             </div>
         </div>
     )

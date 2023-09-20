@@ -16,6 +16,7 @@ export default function Home() {
     <p>No Data</p>
 
   ]
+
   const [comp, setComp] = useState(0);
   return (
     <main >
