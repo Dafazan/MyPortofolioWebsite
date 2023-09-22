@@ -2,25 +2,12 @@
 import React from 'react'
 import { useState } from 'react';
 //translate-y-3 border-x-2 border-t-2 border-[#00F0FF]
-function Portofolio() {
-    const [img, setImg] = useState(0);
-    const handleClick = () => {
-        setImg((prevImg) => (prevImg === 4 ? 0 : prevImg + 1));
-    };
-    const handleClickr = () => {
-        setImg((prevImg) => (prevImg === 0 ? 4 : prevImg - 1));
-    };
-    let imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-red-500';
+import WebApp from '../components/portofolios/WebApp'
+import GamesApp from '../components/portofolios/GamesApp'
+import Arts from '../components/portofolios/Arts'
 
-    if (img === 0) {
-        imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-blue-500';
-    } else if (img === 1) {
-        imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-violet-500';
-    } else if (img === 2) {
-        imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-slate-400';
-    } else if (img === 3) {
-        imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-yellow-500';
-    }
+
+function Portofolio() {
 
 
     const components = [
@@ -54,20 +41,44 @@ function Portofolio() {
                     </button>
                 </div>
             </div>
-            <div className='flex bgd mt-2 border-2 border-[#00F0FF] rounded-b-xl p-5 w-full'>
-                <div className='flex w-full'>
-                    <div className={imageSopay}>
-                        <div className='w-full h-full flex-grow'></div>
-                        <div className='flex'>
-                            <div className='w-1/12 bgl txt1 hover:text-2xl rounded-es-xl flex justify-center items-center text-'><button onClick={handleClickr}>&lt;</button></div>
-                            <div className='w-10/12 h-[30px]'></div>
-                            <div className='w-1/12 bgl txt1 hover:text-2xl rounded-ee-xl flex justify-center items-center text-'><button onClick={handleClick}>&gt;</button></div>
+            <div className='bgd mt-2 border-2 border-[#00F0FF] rounded-b-xl p-5 w-full'>
+                {
+                    comp == 0 ?
+                        <div className='grid grid-cols-1 gap-5'>
+                            <WebApp />
+                            <WebApp />
+                            <WebApp />
+                            <WebApp />
                         </div>
-                    </div>
+                        : comp == 1 ?
+                            <div className='grid grid-cols-1 gap-5'>
+                                <GamesApp />
+                                <GamesApp />
+                                <GamesApp />
+                                <GamesApp />
+                            </div>
 
+                            : comp == 2 ?
 
-                    <div>tulisan</div>
-                </div>
+                                <div className='grid grid-cols-1 gap-5'>
+                                    <Arts />
+                                    <Arts />
+                                    <Arts />
+                                    <Arts />
+                                </div>
+                                : comp == 3 ?
+                                    <div className='grid grid-cols-1 gap-5'>
+                                        3d
+                                    </div>
+
+                                    : comp == 4 ?
+
+                                        <div className='grid grid-cols-1 gap-5'>
+                                            Other
+                                        </div> : false
+
+                }
+
             </div>
 
         </div>
