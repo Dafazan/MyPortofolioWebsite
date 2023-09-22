@@ -8,6 +8,7 @@ import CyberlabsDesc from '../app/components/workplaces/cyberlabs'
 import SaptalokaDesc from '../app/components/workplaces/saptaloka'
 import EmptyDesc from '../app/components/workplaces/empty'
 import ProjokDesc from '../app/components/workplaces/projok'
+import { BlenderCanvas } from './components/prefabs/logo/blender'
 
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
 
   const [comp, setComp] = useState(0);
   return (
-    <main >
+    <main className='text-white'>
 
       <p className='md:text-7xl text-3xl font-bold items-center text-black bg-yellow-300'>Website under development</p>
       <div className=' w-screen h-4/5 bgl md:flex md:pt-20'>
@@ -65,11 +66,13 @@ export default function Home() {
 
           <div className='md:w-4/12 bg-red-800'>image</div>
         </div>
-        <div className='bg-violet-400 mt-20'>
+        <div className=' mt-20'>
           Skills
         </div>
-        <div className='bg-violet-800 grid grid-cols-2 md:grid-cols-4 gap-5'>
-          <div className='bgd'>skillGrid</div>
+        <div className=' grid grid-cols-2 md:grid-cols-4 gap-5'>
+          <div className='bgd'>
+            <BlenderCanvas />
+          </div>
           <div className='bgd'>skillGrid</div>
           <div className='bgd'>skillGrid</div>
           <div className='bgd'>skillGrid</div>
