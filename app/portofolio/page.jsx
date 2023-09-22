@@ -69,6 +69,7 @@ function Portofolio() {
                     <div>tulisan</div>
                 </div>
             </div>
+
         </div>
     )
 }

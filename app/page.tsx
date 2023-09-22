@@ -85,6 +85,7 @@ export default function Home() {
       <div className='bgl md:px-20 p-10'>
         <div className='txt1 flex justify-center items-center text-center text-4xl md:text-6xl py-7'><p>Where I&rsquo;ve Worked</p></div>
         <div className='md:px-48 md:flex'>
+
           <div className=' md:w-3/12 flex-row md:py-5 duration-100 ease-in-out md:justify-end md:text-end'>
             <div> <button onClick={() => setComp(0)} className={`${comp == 0 ? "text-xl txt1" : "txt1d duration-100 ease-in-out"}`}>Cyberlabs</button></div>
             <div> <button onClick={() => setComp(1)} className={`${comp == 1 ? "text-xl txt1" : "txt1d duration-100 ease-in-out"}`}>Saptaloka Digital</button></div>
