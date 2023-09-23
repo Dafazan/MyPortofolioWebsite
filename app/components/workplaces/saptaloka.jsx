@@ -17,7 +17,7 @@ function SaptalokaDesc() {
             <motion.p
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1 }}>Also a description here</motion.p>
+                transition={{ duration: 0.5, delay: 1 }}>In Saptaloka Digotal, I had experienced developing various simulation app and games with Unity Engine, Vuforia, Blender and Firebase. also developing various Websites as a Front-End Developer with Next.js Framework and Tailwind CSS.</motion.p>
         </>
     )
 }

@@ -17,7 +17,7 @@ function CyberlabsDesc() {
             <motion.p
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1 }}>Description here</motion.p>
+                transition={{ duration: 0.5, delay: 1 }}>While I am in my internship at cyberlabs, I am developing news website with Laravel framework and Bootstrap framework, with MySQL as database.</motion.p>
         </>
     )
 }
