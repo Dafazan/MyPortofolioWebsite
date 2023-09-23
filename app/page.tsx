@@ -15,6 +15,14 @@ import { TailwindCanvas } from './components/prefabs/logo/tailwind'
 import { BootstrapCanvas } from './components/prefabs/logo/bootstrap'
 import { NextCanvas } from './components/prefabs/logo/next'
 import { LaravelCanvas } from './components/prefabs/logo/laravel'
+import { MysqlCanvas } from './components/prefabs/logo/mysql'
+import { FigmaCanvas } from './components/prefabs/logo/figma'
+import { PrCanvas } from './components/prefabs/logo/pr'
+import { PsCanvas } from './components/prefabs/logo/ps'
+import { XdCanvas } from './components/prefabs/logo/xd'
+import { AiCanvas } from './components/prefabs/logo/ai'
+import { IgniterCanvas } from './components/prefabs/logo/igniter'
+import { FlsCanvas } from './components/prefabs/logo/fls'
 
 
 export default function Home() {
@@ -72,33 +80,8 @@ export default function Home() {
 
           <div className='md:w-4/12 bg-red-800'>image</div>
         </div>
-        <div className=' mt-20'>
-          <p className='text-2xl py-2 txt1'>Technology I have been used:</p>
-        </div>
-        <div className=' grid grid-cols-2 md:grid-cols-4 gap-5'>
 
-          <div className='bgd flex flex-col justify-center items-center'>
-            <BlenderCanvas />
-            <p>Blender</p>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'><UnityCanvas />
-            <p>Unity</p></div>
-          <div className='bgd flex flex-col justify-center items-center'><VuforiaCanvas />
-            <p>Vuforia</p></div>
-          <div className='bgd flex flex-col justify-center items-center'></div>
-          <div className='bgd flex flex-col justify-center items-center'><BootstrapCanvas />
-            <p>Bootstrap 5</p></div>
-          <div className='bgd flex flex-col justify-center items-center'><NextCanvas />
-            <p>Next.Js</p></div>
-          <div className='bgd flex flex-col justify-center items-center'><LaravelCanvas />
-            <p>Laravel</p></div>
-          <div className='bgd flex flex-col justify-center items-center'></div>
-          <div className='bgd flex flex-col justify-center items-center'><TailwindCanvas />
-            <p>Tailwind</p></div>
-          <div className='bgd flex flex-col justify-center items-center'>Grid</div>
-        </div>
       </div>
-
       <div className='bgl md:px-20 p-10'>
         <div className='txt1 flex justify-center items-center text-center text-4xl md:text-6xl py-7'><p>Where I&rsquo;ve Worked</p></div>
         <div className='md:px-48 md:flex'>
@@ -129,6 +112,115 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className='bgd md:px-20 p-10'>
+        <div className=' mt-20'>
+          <p className='text-2xl py-2 txt1'>Technologies I have been used:</p>
+        </div>
+        <div className=' grid grid-cols-2 md:grid-cols-6 gap-5'>
+
+
+          <div className='bgd flex flex-col justify-center items-center'>
+            <UnityCanvas />
+            <a href="https://unity.com/">
+              <p>Unity</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <VuforiaCanvas />
+            <a href="https://developer.vuforia.com/">
+              <p>Vuforia</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <TailwindCanvas />
+            <a href="https://tailwindcss.com/">
+              <p>Tailwind CSS</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <BootstrapCanvas />
+            <a href="https://getbootstrap.com/">
+              <p>Bootstrap 5</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <NextCanvas />
+            <a href="https://nextjs.org/">
+              <p>Next.Js</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <LaravelCanvas />
+            <a href="https://laravel.com/">
+              <p>Laravel</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <MysqlCanvas />
+            <a href="https://www.mysql.com/">
+              <p>MySQL</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <IgniterCanvas />
+            <a href="https://codeigniter.com/">
+              <p>CodeIgniter 3</p>
+            </a>
+          </div>
+        </div>
+        <div className=' mt-20'>
+          <p className='text-2xl py-2 txt1'>Tools I have been used:</p>
+        </div>
+        <div className=' grid grid-cols-2 md:grid-cols-6 gap-5'>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <BlenderCanvas />
+            <a href="https://www.blender.org/">
+              <p>Blender</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <FigmaCanvas />
+            <a href="https://www.figma.com">
+              <p>Figma</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <AiCanvas />
+            <a href="https://www.adobe.com/id_en/products/illustrator.html">
+              <p>Adobe Illustrator</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <XdCanvas />
+            <a href="https://helpx.adobe.com/id_en/support/xd.html">
+              <p>Adobe XD</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <PsCanvas />
+            <a href="https://www.adobe.com/id_en/products/photoshop.html">
+              <p>Adobe Photoshop</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <PrCanvas />
+            <a href="https://www.adobe.com/id_en/products/premiere.html">
+              <p>Adobe Premiere</p>
+            </a>
+          </div>
+          <div className='bgd flex flex-col justify-center items-center'>
+            <FlsCanvas />
+            <a href="https://www.image-line.com/">
+              <p>Fruity Loop Studio</p>
+            </a>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
 
       <div className='bgd md:px-20 p-10'>
         <div className='bg-red-900'>Things ive done</div>

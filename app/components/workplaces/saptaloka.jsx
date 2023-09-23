@@ -8,7 +8,7 @@ function SaptalokaDesc() {
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0 }}
-                className='text-xl'>Developer at <span className='txt1'><a href="https://saptalokadigital.com/">Saptaloka Digital</a></span></motion.p>
+                className='text-xl'>IT Staff at <span className='txt1'><a href="https://saptalokadigital.com/">Saptaloka Digital</a></span></motion.p>
             <motion.p
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
