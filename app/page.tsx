@@ -9,6 +9,12 @@ import SaptalokaDesc from '../app/components/workplaces/saptaloka'
 import EmptyDesc from '../app/components/workplaces/empty'
 import ProjokDesc from '../app/components/workplaces/projok'
 import { BlenderCanvas } from './components/prefabs/logo/blender'
+import { UnityCanvas } from './components/prefabs/logo/unity'
+import { VuforiaCanvas } from './components/prefabs/logo/vuforia'
+import { TailwindCanvas } from './components/prefabs/logo/tailwind'
+import { BootstrapCanvas } from './components/prefabs/logo/bootstrap'
+import { NextCanvas } from './components/prefabs/logo/next'
+import { LaravelCanvas } from './components/prefabs/logo/laravel'
 
 
 export default function Home() {
@@ -67,21 +73,29 @@ export default function Home() {
           <div className='md:w-4/12 bg-red-800'>image</div>
         </div>
         <div className=' mt-20'>
-          Skills
+          <p className='text-2xl py-2 txt1'>Technology I have been used:</p>
         </div>
         <div className=' grid grid-cols-2 md:grid-cols-4 gap-5'>
-          <div className='bgd'>
+
+          <div className='bgd flex flex-col justify-center items-center'>
             <BlenderCanvas />
+            <p>Blender</p>
           </div>
-          <div className='bgd'>skillGrid</div>
-          <div className='bgd'>skillGrid</div>
-          <div className='bgd'>skillGrid</div>
-          <div className='bgd'>skillGrid</div>
-          <div className='bgd'>skillGrid</div>
-          <div className='bgd'>skillGrid</div>
-          <div className='bgd'>skillGrid</div>
-          <div className='bgd'>skillGrid</div>
-          <div className='bgd'>skillGrid</div>
+          <div className='bgd flex flex-col justify-center items-center'><UnityCanvas />
+            <p>Unity</p></div>
+          <div className='bgd flex flex-col justify-center items-center'><VuforiaCanvas />
+            <p>Vuforia</p></div>
+          <div className='bgd flex flex-col justify-center items-center'></div>
+          <div className='bgd flex flex-col justify-center items-center'><BootstrapCanvas />
+            <p>Bootstrap 5</p></div>
+          <div className='bgd flex flex-col justify-center items-center'><NextCanvas />
+            <p>Next.Js</p></div>
+          <div className='bgd flex flex-col justify-center items-center'><LaravelCanvas />
+            <p>Laravel</p></div>
+          <div className='bgd flex flex-col justify-center items-center'></div>
+          <div className='bgd flex flex-col justify-center items-center'><TailwindCanvas />
+            <p>Tailwind</p></div>
+          <div className='bgd flex flex-col justify-center items-center'>Grid</div>
         </div>
       </div>
 
