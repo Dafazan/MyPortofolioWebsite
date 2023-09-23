@@ -17,7 +17,7 @@ function ProjokDesc() {
             <motion.p
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1 }}>This is definetely a description here</motion.p>
+                transition={{ duration: 0.5, delay: 1 }}>I began creating content on TikTok, Instagram Reels and Youtube Short with 4 other people, we have shared many videos about daily life of a Programmer.</motion.p>
         </>
     )
 }
