@@ -9,6 +9,7 @@ import CyberlabsDesc from '../app/components/workplaces/cyberlabs'
 import SaptalokaDesc from '../app/components/workplaces/saptaloka'
 import EmptyDesc from '../app/components/workplaces/empty'
 import ProjokDesc from '../app/components/workplaces/projok'
+import { isMobile } from "react-device-detect";
 //import { BlenderCanvas } from './components/prefabs/logo/blender'
 // import { UnityCanvas } from './components/prefabs/logo/unity'
 // import { VuforiaCanvas } from './components/prefabs/logo/vuforia'
@@ -28,7 +29,6 @@ import ProjokDesc from '../app/components/workplaces/projok'
 
 export default function Home() {
 
-  const isDesktop = window.innerWidth >= 768;
 
   const DynamicBlenderCanvas = dynamic(() =>
     import('./components/prefabs/logo/blender').then((module) => module.default), {
@@ -244,7 +244,7 @@ export default function Home() {
         <div className=' mt-20'>
           <p className='text-2xl py-2 txt1'>Technologies I have been used:</p>
         </div>
-        {isDesktop && (
+        {!isMobile && (
           // Your 3D component goes here
 
 
@@ -308,7 +308,7 @@ export default function Home() {
         <div className=' mt-20'>
           <p className='text-2xl py-2 txt1'>Tools I have been used:</p>
         </div>
-        {isDesktop && (
+        {!isMobile && (
           <div className=' grid grid-cols-2 md:grid-cols-6 gap-5'>
             <div className='bgd flex flex-col justify-center items-center'>
 
