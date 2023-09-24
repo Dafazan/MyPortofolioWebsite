@@ -27,6 +27,9 @@ import ProjokDesc from '../app/components/workplaces/projok'
 
 
 export default function Home() {
+
+  const isDesktop = window.innerWidth >= 768;
+
   const DynamicBlenderCanvas = dynamic(() =>
     import('./components/prefabs/logo/blender').then((module) => module.default), {
     loading: () => <p>Loading 3D Objects</p>,
@@ -241,111 +244,118 @@ export default function Home() {
         <div className=' mt-20'>
           <p className='text-2xl py-2 txt1'>Technologies I have been used:</p>
         </div>
-        <div className=' grid grid-cols-2 md:grid-cols-6 gap-5'>
+        {isDesktop && (
+          // Your 3D component goes here
 
 
-          <div className='bgd flex flex-col justify-center items-center'>
+          <div className=' grid grid-cols-2 md:grid-cols-6 gap-5'>
 
-            <DynamicUnityCanvas />
-            <a href="https://unity.com/">
-              <p>Unity</p>
-            </a>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'>
-            {/* {loadingStep === 2 && } */}
-            <DynamicVuforiaCanvas />
-            <a href="https://developer.vuforia.com/">
-              <p>Vuforia</p>
-            </a>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'>
 
-            <DynamicTailwindCanvas />
-            <a href="https://tailwindcss.com/">
-              <p>Tailwind CSS</p>
-            </a>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'>
+            <div className='bgd flex flex-col justify-center items-center'>
 
-            <DynamicBootstrapCanvas />
-            <a href="https://getbootstrap.com/">
-              <p>Bootstrap 5</p>
-            </a>
+              <DynamicUnityCanvas />
+              <a href="https://unity.com/">
+                <p>Unity</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+              {/* {loadingStep === 2 && } */}
+              <DynamicVuforiaCanvas />
+              <a href="https://developer.vuforia.com/">
+                <p>Vuforia</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+
+              <DynamicTailwindCanvas />
+              <a href="https://tailwindcss.com/">
+                <p>Tailwind CSS</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+
+              <DynamicBootstrapCanvas />
+              <a href="https://getbootstrap.com/">
+                <p>Bootstrap 5</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+              <DynamicNextCanvas />
+              <a href="https://nextjs.org/">
+                <p>Next.Js</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+              <DynamicLaravelCanvas />
+              <a href="https://laravel.com/">
+                <p>Laravel</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+              <DynamicMysqlCanvas />
+              <a href="https://www.mysql.com/">
+                <p>MySQL</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+              <DynamicIgniterCanvas />
+              <a href="https://codeigniter.com/">
+                <p>CodeIgniter 3</p>
+              </a>
+            </div>
           </div>
-          <div className='bgd flex flex-col justify-center items-center'>
-            <DynamicNextCanvas />
-            <a href="https://nextjs.org/">
-              <p>Next.Js</p>
-            </a>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'>
-            <DynamicLaravelCanvas />
-            <a href="https://laravel.com/">
-              <p>Laravel</p>
-            </a>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'>
-            <DynamicMysqlCanvas />
-            <a href="https://www.mysql.com/">
-              <p>MySQL</p>
-            </a>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'>
-            <DynamicIgniterCanvas />
-            <a href="https://codeigniter.com/">
-              <p>CodeIgniter 3</p>
-            </a>
-          </div>
-        </div>
+        )}
         <div className=' mt-20'>
           <p className='text-2xl py-2 txt1'>Tools I have been used:</p>
         </div>
-        <div className=' grid grid-cols-2 md:grid-cols-6 gap-5'>
-          <div className='bgd flex flex-col justify-center items-center'>
+        {isDesktop && (
+          <div className=' grid grid-cols-2 md:grid-cols-6 gap-5'>
+            <div className='bgd flex flex-col justify-center items-center'>
 
-            <DynamicBlenderCanvas />
-            <a href="https://www.blender.org/">
-              <p>Blender</p>
-            </a>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'>
-            <DynamicFigmaCanvas />
-            <a href="https://www.figma.com">
-              <p>Figma</p>
-            </a>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'>
-            <DynamicAiCanvas />
-            <a href="https://www.adobe.com/id_en/products/illustrator.html">
-              <p>Adobe Illustrator</p>
-            </a>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'>
-            <DynamicXdCanvas />
-            <a href="https://helpx.adobe.com/id_en/support/xd.html">
-              <p>Adobe XD</p>
-            </a>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'>
-            <DynamicPsCanvas />
-            <a href="https://www.adobe.com/id_en/products/photoshop.html">
-              <p>Adobe Photoshop</p>
-            </a>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'>
-            <DynamicPrCanvas />
-            <a href="https://www.adobe.com/id_en/products/premiere.html">
-              <p>Adobe Premiere</p>
-            </a>
-          </div>
-          <div className='bgd flex flex-col justify-center items-center'>
-            <DynamicFlsCanvas />
-            <a href="https://www.image-line.com/">
-              <p>Fruity Loop Studio</p>
-            </a>
-          </div>
+              <DynamicBlenderCanvas />
+              <a href="https://www.blender.org/">
+                <p>Blender</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+              <DynamicFigmaCanvas />
+              <a href="https://www.figma.com">
+                <p>Figma</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+              <DynamicAiCanvas />
+              <a href="https://www.adobe.com/id_en/products/illustrator.html">
+                <p>Adobe Illustrator</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+              <DynamicXdCanvas />
+              <a href="https://helpx.adobe.com/id_en/support/xd.html">
+                <p>Adobe XD</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+              <DynamicPsCanvas />
+              <a href="https://www.adobe.com/id_en/products/photoshop.html">
+                <p>Adobe Photoshop</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+              <DynamicPrCanvas />
+              <a href="https://www.adobe.com/id_en/products/premiere.html">
+                <p>Adobe Premiere</p>
+              </a>
+            </div>
+            <div className='bgd flex flex-col justify-center items-center'>
+              <DynamicFlsCanvas />
+              <a href="https://www.image-line.com/">
+                <p>Fruity Loop Studio</p>
+              </a>
+            </div>
 
-        </div>
+          </div>
+        )}
 
 
       </div>
