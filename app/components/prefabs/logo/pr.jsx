@@ -59,3 +59,5 @@ export const PrCanvas = () => {
         </Canvas>
     );
 };
+
+export default PrCanvas;

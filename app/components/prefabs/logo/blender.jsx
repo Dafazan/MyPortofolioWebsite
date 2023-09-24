@@ -59,3 +59,5 @@ export const BlenderCanvas = () => {
         </Canvas>
     );
 };
+
+export default BlenderCanvas;

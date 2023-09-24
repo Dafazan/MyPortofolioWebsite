@@ -59,3 +59,5 @@ export const VuforiaCanvas = () => {
         </Canvas>
     );
 };
+
+export default VuforiaCanvas;

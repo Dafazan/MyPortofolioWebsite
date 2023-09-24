@@ -59,3 +59,5 @@ export const XdCanvas = () => {
         </Canvas>
     );
 };
+
+export default XdCanvas;

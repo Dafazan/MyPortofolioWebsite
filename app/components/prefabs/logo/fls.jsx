@@ -59,3 +59,5 @@ export const FlsCanvas = () => {
         </Canvas>
     );
 };
+
+export default FlsCanvas;

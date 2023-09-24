@@ -59,3 +59,5 @@ export const IgniterCanvas = () => {
         </Canvas>
     );
 };
+
+export default IgniterCanvas;

@@ -59,3 +59,5 @@ export const FigmaCanvas = () => {
         </Canvas>
     );
 };
+
+export default FigmaCanvas;

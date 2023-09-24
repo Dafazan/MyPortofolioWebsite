@@ -59,3 +59,5 @@ export const AiCanvas = () => {
         </Canvas>
     );
 };
+
+export default AiCanvas;

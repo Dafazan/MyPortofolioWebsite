@@ -59,3 +59,5 @@ export const BootstrapCanvas = () => {
         </Canvas>
     );
 };
+
+export default BootstrapCanvas;

@@ -1,31 +1,156 @@
 'use client'
+import dynamic from 'next/dynamic';
 import Image from 'next/image'
 import React, { Suspense } from "react";
 import CardInfo from '../app/components/frontcard';
 import Splide from '@splidejs/splide'
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import CyberlabsDesc from '../app/components/workplaces/cyberlabs'
 import SaptalokaDesc from '../app/components/workplaces/saptaloka'
 import EmptyDesc from '../app/components/workplaces/empty'
 import ProjokDesc from '../app/components/workplaces/projok'
-import { BlenderCanvas } from './components/prefabs/logo/blender'
-import { UnityCanvas } from './components/prefabs/logo/unity'
-import { VuforiaCanvas } from './components/prefabs/logo/vuforia'
-import { TailwindCanvas } from './components/prefabs/logo/tailwind'
-import { BootstrapCanvas } from './components/prefabs/logo/bootstrap'
-import { NextCanvas } from './components/prefabs/logo/next'
-import { LaravelCanvas } from './components/prefabs/logo/laravel'
-import { MysqlCanvas } from './components/prefabs/logo/mysql'
-import { FigmaCanvas } from './components/prefabs/logo/figma'
-import { PrCanvas } from './components/prefabs/logo/pr'
-import { PsCanvas } from './components/prefabs/logo/ps'
-import { XdCanvas } from './components/prefabs/logo/xd'
-import { AiCanvas } from './components/prefabs/logo/ai'
-import { IgniterCanvas } from './components/prefabs/logo/igniter'
-import { FlsCanvas } from './components/prefabs/logo/fls'
+//import { BlenderCanvas } from './components/prefabs/logo/blender'
+// import { UnityCanvas } from './components/prefabs/logo/unity'
+// import { VuforiaCanvas } from './components/prefabs/logo/vuforia'
+// import { TailwindCanvas } from './components/prefabs/logo/tailwind'
+// import { BootstrapCanvas } from './components/prefabs/logo/bootstrap'
+// import { NextCanvas } from './components/prefabs/logo/next'
+// import { LaravelCanvas } from './components/prefabs/logo/laravel'
+// import { MysqlCanvas } from './components/prefabs/logo/mysql'
+// import { FigmaCanvas } from './components/prefabs/logo/figma'
+// import { PrCanvas } from './components/prefabs/logo/pr'
+// import { PsCanvas } from './components/prefabs/logo/ps'
+// import { XdCanvas } from './components/prefabs/logo/xd'
+// import { AiCanvas } from './components/prefabs/logo/ai'
+// import { IgniterCanvas } from './components/prefabs/logo/igniter'
+// import { FlsCanvas } from './components/prefabs/logo/fls'
 
 
 export default function Home() {
+  const DynamicBlenderCanvas = dynamic(() =>
+    import('./components/prefabs/logo/blender').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicUnityCanvas = dynamic(() =>
+    import('./components/prefabs/logo/unity').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicVuforiaCanvas = dynamic(() =>
+    import('./components/prefabs/logo/vuforia').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicTailwindCanvas = dynamic(() =>
+    import('./components/prefabs/logo/tailwind').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicBootstrapCanvas = dynamic(() =>
+    import('./components/prefabs/logo/bootstrap').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicNextCanvas = dynamic(() =>
+    import('./components/prefabs/logo/next').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicLaravelCanvas = dynamic(() =>
+    import('./components/prefabs/logo/laravel').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicMysqlCanvas = dynamic(() =>
+    import('./components/prefabs/logo/mysql').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicFigmaCanvas = dynamic(() =>
+    import('./components/prefabs/logo/figma').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicPrCanvas = dynamic(() =>
+    import('./components/prefabs/logo/pr').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicPsCanvas = dynamic(() =>
+    import('./components/prefabs/logo/ps').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicXdCanvas = dynamic(() =>
+    import('./components/prefabs/logo/xd').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicAiCanvas = dynamic(() =>
+    import('./components/prefabs/logo/ai').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicIgniterCanvas = dynamic(() =>
+    import('./components/prefabs/logo/igniter').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+  const DynamicFlsCanvas = dynamic(() =>
+    import('./components/prefabs/logo/fls').then((module) => module.default), {
+    loading: () => <p>Loading 3D Objects</p>,
+    ssr: false,
+  });
+
+  // const [loadingStep, setLoadingStep] = useState(1);
+
+  // useEffect(() => {
+  //   const loadNextComponent = () => {
+  //     if (loadingStep < 5) {
+  //       setLoadingStep((prevStep) => prevStep + 1);
+  //     }
+  //   };
+  //   // Simulate loading one component at a time with a delay
+  //   const loadingInterval = setInterval(loadNextComponent, 2000);
+
+  //   return () => {
+  //     clearInterval(loadingInterval);
+  //   };
+  // }, [loadingStep]);
+
+
+  // const [isComponentVisible, setIsComponentVisible] = useState(false);
+  // const componentRef = useRef(null);
+
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           setIsComponentVisible(true);
+  //           // Stop observing once it's visible (optional)
+  //           observer.unobserve(componentRef.current);
+  //         }
+  //       });
+  //     },
+  //     {
+  //       root: null, // Use the viewport as the root
+  //       threshold: 0.5, // Trigger when 50% of the component is visible
+  //     }
+  //   );
+
+  //   if (componentRef.current) {
+  //     observer.observe(componentRef.current);
+  //   }
+
+  //   return () => {
+  //     if (componentRef.current) {
+  //       observer.unobserve(componentRef.current);
+  //     }
+  //   };
+  // }, []);
+
   const components = [
     // eslint-disable-next-line react/jsx-key
     <p>No Data</p>
@@ -36,7 +161,7 @@ export default function Home() {
   return (
     <main className='text-white'>
 
-      <p className='md:text-7xl text-3xl font-bold items-center text-black bg-yellow-300'>Website under development</p>
+
       <div className=' w-screen h-4/5 bgl md:flex md:pt-20'>
         <div className=' md:w-2/6 w-[0px] md:pt-0 pt-10'>
           <div className='sm:me-20 md:ms-40 md:m-10 m-10 '>
@@ -120,49 +245,53 @@ export default function Home() {
 
 
           <div className='bgd flex flex-col justify-center items-center'>
-            <UnityCanvas />
+
+            <DynamicUnityCanvas />
             <a href="https://unity.com/">
               <p>Unity</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <VuforiaCanvas />
+            {/* {loadingStep === 2 && } */}
+            <DynamicVuforiaCanvas />
             <a href="https://developer.vuforia.com/">
               <p>Vuforia</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <TailwindCanvas />
+
+            <DynamicTailwindCanvas />
             <a href="https://tailwindcss.com/">
               <p>Tailwind CSS</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <BootstrapCanvas />
+
+            <DynamicBootstrapCanvas />
             <a href="https://getbootstrap.com/">
               <p>Bootstrap 5</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <NextCanvas />
+            <DynamicNextCanvas />
             <a href="https://nextjs.org/">
               <p>Next.Js</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <LaravelCanvas />
+            <DynamicLaravelCanvas />
             <a href="https://laravel.com/">
               <p>Laravel</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <MysqlCanvas />
+            <DynamicMysqlCanvas />
             <a href="https://www.mysql.com/">
               <p>MySQL</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <IgniterCanvas />
+            <DynamicIgniterCanvas />
             <a href="https://codeigniter.com/">
               <p>CodeIgniter 3</p>
             </a>
@@ -173,43 +302,44 @@ export default function Home() {
         </div>
         <div className=' grid grid-cols-2 md:grid-cols-6 gap-5'>
           <div className='bgd flex flex-col justify-center items-center'>
-            <BlenderCanvas />
+
+            <DynamicBlenderCanvas />
             <a href="https://www.blender.org/">
               <p>Blender</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <FigmaCanvas />
+            <DynamicFigmaCanvas />
             <a href="https://www.figma.com">
               <p>Figma</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <AiCanvas />
+            <DynamicAiCanvas />
             <a href="https://www.adobe.com/id_en/products/illustrator.html">
               <p>Adobe Illustrator</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <XdCanvas />
+            <DynamicXdCanvas />
             <a href="https://helpx.adobe.com/id_en/support/xd.html">
               <p>Adobe XD</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <PsCanvas />
+            <DynamicPsCanvas />
             <a href="https://www.adobe.com/id_en/products/photoshop.html">
               <p>Adobe Photoshop</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <PrCanvas />
+            <DynamicPrCanvas />
             <a href="https://www.adobe.com/id_en/products/premiere.html">
               <p>Adobe Premiere</p>
             </a>
           </div>
           <div className='bgd flex flex-col justify-center items-center'>
-            <FlsCanvas />
+            <DynamicFlsCanvas />
             <a href="https://www.image-line.com/">
               <p>Fruity Loop Studio</p>
             </a>

@@ -59,3 +59,5 @@ export const PsCanvas = () => {
         </Canvas>
     );
 };
+
+export default PsCanvas;

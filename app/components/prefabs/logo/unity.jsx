@@ -59,3 +59,4 @@ export const UnityCanvas = () => {
         </Canvas>
     );
 };
+export default UnityCanvas;

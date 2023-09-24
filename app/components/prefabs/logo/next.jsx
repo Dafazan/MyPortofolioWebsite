@@ -59,3 +59,5 @@ export const NextCanvas = () => {
         </Canvas>
     );
 };
+
+export default NextCanvas;

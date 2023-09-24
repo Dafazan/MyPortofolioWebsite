@@ -59,3 +59,5 @@ export const TailwindCanvas = () => {
         </Canvas>
     );
 };
+
+export default TailwindCanvas;

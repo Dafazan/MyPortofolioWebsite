@@ -59,3 +59,5 @@ export const MysqlCanvas = () => {
         </Canvas>
     );
 };
+
+export default MysqlCanvas;

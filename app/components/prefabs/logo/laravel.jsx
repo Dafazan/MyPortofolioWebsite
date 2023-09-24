@@ -59,3 +59,5 @@ export const LaravelCanvas = () => {
         </Canvas>
     );
 };
+
+export default LaravelCanvas;
