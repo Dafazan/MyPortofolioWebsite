@@ -7,7 +7,7 @@ function NavbarCustom() {
     return (
         <>
 
-            <div className=' w-full z-10'>
+            <div className=' w-full z-10 text-white'>
                 <nav class="border-gray-20 bg-gray-900">
                     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
                         <a href="https://dafazan.my.id" class="flex items-center">
