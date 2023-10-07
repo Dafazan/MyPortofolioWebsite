@@ -5,6 +5,7 @@ import { useState } from 'react';
 import WebApp from '../components/portofolios/WebApp'
 import GamesApp from '../components/portofolios/GamesApp'
 import Arts from '../components/portofolios/Arts'
+import Musics from '../components/portofolios/Musics'
 
 
 function Portofolio() {
@@ -46,47 +47,156 @@ function Portofolio() {
                     comp == 0 ?
                         <div className='grid grid-cols-1 gap-5'>
                             <WebApp
-                                image1='./dafazan.png'
-                                image2='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
-                                image3='./dafazan.png'
-                                image4='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
-                                image5='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
-                                title='Judul disini' tech='Laravel, Bootstrap 5' desc='This is my app' />
+                                image1='./assets/default.jpeg'
+                                image2='./assets/default.jpeg'
+                                image3='./assets/default.jpeg'
+                                image4='./assets/default.jpeg'
+                                image5='./assets/default.jpeg'
+                                title='This portofolio Website' tech='Next.js, Tailwind, Three.js' desc='This is what it is ;) you probably saw it few seconds earlier before you read this sentence. I designed all of the pages using Figma, then i execute the design to Website using Next.js, tailwind for styling, Firebase as storage and then I hosted the web to vercel' />
+                            <WebApp
+                                image1='./assets/default.jpeg'
+                                image2='./assets/default.jpeg'
+                                image3='./assets/default.jpeg'
+                                image4='./assets/default.jpeg'
+                                image5='./assets/default.jpeg'
+                                title='DVoteE' tech='Laravel, Livewire, Bootstrap 5' desc='This web app provide place for digital election where admin can register the candidate and voters account wich could be done faster with csv import, also admins can see the live statistic that can be exported to excel or pdf' />
+                            <WebApp
+                                image1='./assets/launam1.png'
+                                image2='./assets/launam2.png'
+                                image3='./assets/launam3.png'
+                                image4='./assets/launam4.png'
+                                image5='./assets/launam5.png'
+                                title='Launam Coffee' tech='Next.js, Tailwind,Three.js, Firebase' desc='This is a catalog web for Launam, a coffee shop. This web used three.js for more interactive website' />
+                            <WebApp
+                                image1='./assets/tropisi1.png'
+                                image2='./assets/tropisi2.png'
+                                image3='./assets/tropisi3.png'
+                                image4='./assets/tropisi4.png'
+                                image5='./assets/tropisi5.png'
+                                title='Tropisianimal' tech='Laravel 8, Bootstrap 4, MySQL' desc='This is the project that i have been working on while my internship at cyberlabs as Fullstack web developer, this web provide some info, news or blog about animal life' />
+                            <WebApp
+                                image1='./assets/default.jpeg'
+                                image2='./assets/default.jpeg'
+                                image3='./assets/default.jpeg'
+                                image4='./assets/default.jpeg'
+                                image5='./assets/default.jpeg'
+                                title='EComerce Web' tech='Code Igniter 3, Bootstrap 5, MySQL' desc='This is one of the first fullstack project that i have been working on while i am in high school' />
 
                         </div>
                         : comp == 1 ?
                             <div className='grid grid-cols-1 gap-5'>
                                 <GamesApp
-                                    image1='./dafazan.png'
-                                    image2='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
-                                    image3='./dafazan.png'
-                                    image4='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
-                                    image5='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
-                                    title='Judul disini' tech='Laravel, Bootstrap 5' desc='This is my app' />
+                                    image1='./assets/default.jpeg'
+                                    image2='./assets/default.jpeg'
+                                    image3='./assets/default.jpeg'
+                                    image4='./assets/default.jpeg'
+                                    image5='./assets/default.jpeg'
+                                    title='Interactive Trash App' tech='Unity, Vuforia SDK, Blender, Mapbox SDK' desc='This AR app can detect Organic and Anorganic trash for learning purpose, it also has an interactive AR game where user have to decide if the trash belong to Anorganic trash can or Organic trash can. And lastly using this app users can report trash location wich the altitude and longitude coordinates can be viewed in a map' />
+                                <GamesApp
+                                    image1='./assets/default.jpeg'
+                                    image2='./assets/default.jpeg'
+                                    image3='./assets/default.jpeg'
+                                    image4='./assets/default.jpeg'
+                                    image5='./assets/default.jpeg'
+                                    title='Vespa Bodypaint Order' tech='Unity, Vuforia SDK, Blender, Firebase, Flutter' desc='This AR app is used for ordering Vespa bodypaint, it can detect a Vespa and then a 3D decoy of it will appear within the AR and users can customizing the colors of the decoy then save the desired color for ordering wich then will be saved in Firebase and the owner of the shop can view the order from the second app that made with Flutter' />
+                                <GamesApp
+                                    image1='./assets/default.jpeg'
+                                    image2='./assets/default.jpeg'
+                                    image3='./assets/default.jpeg'
+                                    image4='./assets/default.jpeg'
+                                    image5='./assets/default.jpeg'
+                                    title='Traditional Loop' tech='Unity' desc='This App simulating some traditional Indonesian music instrumental like Bonang, Angklung, Saron, Kecapi, etc. it has two mode, the regular mode and loop mode. Users can record the sounds and the note when they play the instrument wich the Audio and Note can be viewed later via app itself' />
+                                <GamesApp
+                                    image1='./assets/default.jpeg'
+                                    image2='./assets/default.jpeg'
+                                    image3='./assets/default.jpeg'
+                                    image4='./assets/default.jpeg'
+                                    image5='./assets/default.jpeg'
+                                    title='Pitakonan Game' tech='Unity, Blender' desc='This educational game has 3D graphics, when we first entered the game it has multiple choice of characters and places all around Indonesia that we should choose, then we can walk around for example inside Bandung city, the player should find objects that contain games. inside this app users can learn Indonesian culture via games like quiz, word scramble, etc.' />
 
                             </div>
 
                             : comp == 2 ?
 
                                 <div className='grid grid-cols-1 gap-5'>
+
                                     <Arts
-                                        image1='https://cdnb.artstation.com/p/assets/images/images/053/506/003/large/dafazan-1.jpg?1662385038'
-                                        image2='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
-                                        image3='https://cdnb.artstation.com/p/assets/images/images/053/506/053/large/dafazan-civic4.jpg?1662385098'
-                                        image4='https://cdna.artstation.com/p/assets/images/images/053/506/030/large/dafazan-4.jpg?1662385067'
-                                        image5='https://cdnb.artstation.com/p/assets/images/images/053/506/081/large/dafazan-igc2.jpg?1662385138'
-                                        title='Honda Civic' tech='Blender' desc='I made Type R Honda Civic into 3D model with 90% acuracy' />
+                                        image1='https://cdna.artstation.com/p/assets/images/images/039/968/002/large/dafazan-w-moon-c2.jpg?1627470927'
+                                        image2='https://cdnb.artstation.com/p/assets/images/images/039/968/043/large/dafazan-2.jpg?1627471053'
+                                        image3='https://cdna.artstation.com/p/assets/images/images/039/968/002/large/dafazan-w-moon-c2.jpg?1627470927'
+                                        image4='https://cdnb.artstation.com/p/assets/images/images/039/968/043/large/dafazan-2.jpg?1627471053'
+                                        image5='https://cdna.artstation.com/p/assets/images/images/039/968/002/large/dafazan-w-moon-c2.jpg?1627470927'
+                                        title='Earth and Moon' tech='Blender, Photoshop' desc='Earth and Moon Illustration for wallpaper rendered with Blender Cycles and composited with Adobe Photoshop' />
+
+                                    <Arts
+                                        image1='https://cdna.artstation.com/p/assets/images/images/039/971/138/large/dafazan-comp.jpg?1627478459'
+                                        image2='https://cdna.artstation.com/p/assets/images/images/039/971/138/large/dafazan-comp.jpg?1627478459'
+                                        image3='https://cdna.artstation.com/p/assets/images/images/039/971/138/large/dafazan-comp.jpg?1627478459'
+                                        image4='https://cdna.artstation.com/p/assets/images/images/039/971/138/large/dafazan-comp.jpg?1627478459'
+                                        image5='https://cdna.artstation.com/p/assets/images/images/039/971/138/large/dafazan-comp.jpg?1627478459'
+                                        title='Isometric Bridge' tech='Blender' desc='I Made an Isometric illustration based on a fictional place from Tv Series called Code Lyoko wich based on real life bridge to seguin island in france' />
+
+                                    <Arts
+                                        image1='https://cdnb.artstation.com/p/assets/images/images/040/695/679/large/dafazan-wood-clean.jpg?1629639957'
+                                        image2='https://cdnb.artstation.com/p/assets/images/images/040/695/679/large/dafazan-wood-clean.jpg?1629639957'
+                                        image3='https://cdnb.artstation.com/p/assets/images/images/040/695/679/large/dafazan-wood-clean.jpg?1629639957'
+                                        image4='https://cdnb.artstation.com/p/assets/images/images/040/695/679/large/dafazan-wood-clean.jpg?1629639957'
+                                        image5='https://cdnb.artstation.com/p/assets/images/images/040/695/679/large/dafazan-wood-clean.jpg?1629639957'
+                                        title='Sunset Scene' tech='Blender, Photoshop' desc='I Created sunset scene in some spruce wood forest' />
+                                    <Arts
+                                        image1='https://cdna.artstation.com/p/assets/images/images/040/695/712/large/dafazan-mini-city-compnonwm.jpg?1629640055'
+                                        image2='https://cdnb.artstation.com/p/assets/images/images/040/695/721/large/dafazan-mini-city-compnonwm2.jpg?1629640087'
+                                        image3='https://cdna.artstation.com/p/assets/images/images/040/695/712/large/dafazan-mini-city-compnonwm.jpg?1629640055'
+                                        image4='https://cdnb.artstation.com/p/assets/images/images/040/695/721/large/dafazan-mini-city-compnonwm2.jpg?1629640087'
+                                        image5='https://cdna.artstation.com/p/assets/images/images/040/695/712/large/dafazan-mini-city-compnonwm.jpg?1629640055'
+                                        title='Sunset Scene' tech='Blender, Photoshop' desc='I Created a city scene, I rendered daytime version and nightime version and composite it using Adobe Photoshop' />
 
                                 </div>
                                 : comp == 3 ?
                                     <div className='grid grid-cols-1 gap-5'>
-                                        3d
+                                        <Arts
+                                            image1='https://cdnb.artstation.com/p/assets/images/images/053/506/003/large/dafazan-1.jpg?1662385038'
+                                            image2='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
+                                            image3='https://cdnb.artstation.com/p/assets/images/images/053/506/053/large/dafazan-civic4.jpg?1662385098'
+                                            image4='https://cdna.artstation.com/p/assets/images/images/053/506/030/large/dafazan-4.jpg?1662385067'
+                                            image5='https://cdnb.artstation.com/p/assets/images/images/053/506/081/large/dafazan-igc2.jpg?1662385138'
+                                            title='Honda Civic' tech='Blender' desc='I made Type R Honda Civic into 3D model with 90% acuracy' />
+                                        <Arts
+                                            image1='https://cdnb.artstation.com/p/assets/images/images/032/943/625/large/dafazan-3uplox.jpg?1607955553'
+                                            image2='https://cdnb.artstation.com/p/assets/images/images/032/943/635/large/dafazan-2uplox.jpg?1607955572'
+                                            image3='https://cdna.artstation.com/p/assets/images/images/032/943/642/large/dafazan-1uplox.jpg?1607955588'
+                                            image4='https://cdnb.artstation.com/p/assets/images/images/032/943/625/large/dafazan-3uplox.jpg?1607955553'
+                                            image5='https://cdnb.artstation.com/p/assets/images/images/032/943/635/large/dafazan-2uplox.jpg?1607955572'
+                                            title='Tv Table' tech='Blender' desc='I designed and applying the design into 3D model and rendered It with Blender Cycles Render' />
+                                        <Arts
+                                            image1='https://cdnb.artstation.com/p/assets/images/images/034/721/305/large/dafazan-arc1.jpg?1613042583'
+                                            image2='https://cdnb.artstation.com/p/assets/images/images/034/721/305/large/dafazan-arc1.jpg?1613042583'
+                                            image3='https://cdnb.artstation.com/p/assets/images/images/034/721/305/large/dafazan-arc1.jpg?1613042583'
+                                            image4='https://cdnb.artstation.com/p/assets/images/images/034/721/305/large/dafazan-arc1.jpg?1613042583'
+                                            image5='https://cdnb.artstation.com/p/assets/images/images/034/721/305/large/dafazan-arc1.jpg?1613042583'
+                                            title='Tony Stark&rsquo;s Arc reactor' tech='Blender' desc='I tried to recreate Tony stark&rsquo;s Arc Reactor into 3D Model then render it using Blender Cycles' />
                                     </div>
 
                                     : comp == 4 ?
 
                                         <div className='grid grid-cols-1 gap-5'>
-                                            Other
+                                            <Musics
+                                                image1='./assets/iwish.png'
+                                                image2='./assets/iwish.png'
+                                                image3='./assets/iwish.png'
+                                                image4='./assets/iwish.png'
+                                                image5='./assets/iwish.png'
+                                                title='I Wish'
+                                                tech='FL Studio, Spitfire'
+                                                desc='I Created music for game soundtrack need using Fruity Loop Studio and some samples from Spitfire Audio'
+                                                audioSource='./assets/iwish.mp3' />
+                                            <Arts
+                                                image1='./assets/projok1.png'
+                                                image2='./assets/projok2.png'
+                                                image3='./assets/projok1.png'
+                                                image4='./assets/projok2.png'
+                                                image5='./assets/projok1.png'
+                                                title='Programmer Jongkok&rsquo;s Logo' tech='Illustrator' desc='I designed logo for Programmer jongkok. the meaning of the logo is that like the P and the J in it has compeletly different size but still can be perfectly united with that difference. and the colors resembling Saptaloka Digital coors, wich is the place that unite us' />
                                         </div> : false
 
                 }

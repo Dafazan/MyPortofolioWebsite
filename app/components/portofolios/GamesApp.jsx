@@ -11,16 +11,16 @@ function GamesApp({ image1, image2, image3, image4, image5, title, tech, desc })
     const handleClickr = () => {
         setImg((prevImg) => (prevImg === 0 ? 4 : prevImg - 1));
     };
-    let imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-cover ';
+    let imageSopay = 'h-[170px] md:h-[300px] rounded-xl flex flex-col bg-center bg-no-repeat bg-cover';
 
     if (img === 0) {
-        imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-cover ';
+        imageSopay = 'h-[170px] md:h-[300px] rounded-xl flex flex-col bg-center bg-no-repeat bg-cover';
     } else if (img === 1) {
-        imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-cover ';
+        imageSopay = 'h-[170px] md:h-[300px] rounded-xl flex flex-col bg-center bg-no-repeat bg-cover';
     } else if (img === 2) {
-        imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-cover ';
+        imageSopay = 'h-[170px] md:h-[300px] rounded-xl flex flex-col bg-center bg-no-repeat bg-cover';
     } else if (img === 3) {
-        imageSopay = 'h-[300px] w-3/6 rounded-xl flex flex-col bg-cover ';
+        imageSopay = 'h-[170px] md:h-[300px] rounded-xl flex flex-col bg-center bg-no-repeat bg-cover';
     }
     let backgroundImageUrl = `${image5}`;
     if (img === 0) {
@@ -36,7 +36,7 @@ function GamesApp({ image1, image2, image3, image4, image5, title, tech, desc })
     return (
 
 
-        <div className='flex w-full'>
+        <div className='grid grid-cols-1 md:grid-cols-2 w-full'>
             <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -52,7 +52,7 @@ function GamesApp({ image1, image2, image3, image4, image5, title, tech, desc })
             </motion.div>
 
 
-            <div className='px-3 w-3/6'>
+            <div className='px-3 mt-3 md:m-0 bg-gray-700 rounded-xl py-3 md:bg-transparent md:py-0'>
                 <motion.p
                     initial={{ x: 50, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
