@@ -98,7 +98,7 @@ function Portofolio() {
                                     image3='./assets/default.jpeg'
                                     image4='./assets/default.jpeg'
                                     image5='./assets/default.jpeg'
-                                    title='Vespa Bodypaint Order' tech='Unity, Vuforia SDK, Blender, Firebase, Flutter' desc='This AR app is used for ordering Vespa bodypaint, it can detect a Vespa and then a 3D decoy of it will appear within the AR and users can customizing the colors of the decoy then save the desired color for ordering wich then will be saved in Firebase and the owner of the shop can view the order from the second app that made with Flutter' />
+                                    title='Vespa Bodypaint Order' tech='Unity, Vuforia SDK, Blender, Firebase, Flutter' desc='This AR app is used for ordering Vespa bodypaint, it can detect a Vespa and a 3D decoy of it will appear within the AR and users can customizing the colors of the decoy then save the desired color for ordering wich will be saved in Firebase and the owner of the shop can view the order from the second app that made with Flutter' />
                                 <GamesApp
                                     image1='./assets/default.jpeg'
                                     image2='./assets/default.jpeg'
@@ -196,7 +196,7 @@ function Portofolio() {
                                                 image3='./assets/projok1.png'
                                                 image4='./assets/projok2.png'
                                                 image5='./assets/projok1.png'
-                                                title='Programmer Jongkok&rsquo;s Logo' tech='Illustrator' desc='I designed logo for Programmer jongkok. the meaning of the logo is that like the P and the J in it has compeletly different size but still can be perfectly united with that difference. and the colors resembling Saptaloka Digital coors, wich is the place that unite us' />
+                                                title='Programmer Jongkok&rsquo;s Logo' tech='Illustrator' desc='I designed logo for Programmer jongkok. the meaning of the logo is that like the P and the J in it has compeletly different size and shape but still can be perfectly united with that difference. and the colors resembling Saptaloka Digital&rsquo;s colors, wich is the place that unite us' />
                                         </div> : false
 
                 }
