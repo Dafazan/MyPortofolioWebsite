@@ -44,9 +44,9 @@ function Arts({ image1, image2, image3, image4, image5, title, tech, desc }) {
                 style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
                 <div className='w-full h-full flex-grow'></div>
                 <div className='flex'>
-                    <div className='w-1/12 bgl txt1 hover:text-2xl rounded-es-xl flex justify-center items-center text-'><button onClick={handleClickr}>&lt;</button></div>
+                    <button onClick={handleClickr} className='w-1/12 bgl txt1 hover:text-2xl rounded-es-xl flex justify-center items-center text-'><p >&lt;</p></button>
                     <div className='w-10/12 h-[30px]'></div>
-                    <div className='w-1/12 bgl txt1 hover:text-2xl rounded-ee-xl flex justify-center items-center text-'><button onClick={handleClick}>&gt;</button></div>
+                    <button onClick={handleClick} className='w-1/12 bgl txt1 hover:text-2xl rounded-ee-xl flex justify-center items-center text-'><p >&gt;</p></button>
                 </div>
             </motion.div>
 

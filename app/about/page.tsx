@@ -29,7 +29,7 @@ export default function about() {
 
     const availability = (number / numero.total) * 100 + "%";
     return (
-        <main>
+        <main className='text-white'>
             <div className="h-screen">
                 <div className='flex justify-center items-center'>
                     <div className='grid grid-cols-1'>
