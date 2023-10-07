@@ -45,26 +45,38 @@ function Portofolio() {
                 {
                     comp == 0 ?
                         <div className='grid grid-cols-1 gap-5'>
-                            <WebApp />
-                            <WebApp />
-                            <WebApp />
-                            <WebApp />
+                            <WebApp
+                                image1='./dafazan.png'
+                                image2='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
+                                image3='./dafazan.png'
+                                image4='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
+                                image5='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
+                                title='Judul disini' tech='Laravel, Bootstrap 5' desc='This is my app' />
+
                         </div>
                         : comp == 1 ?
                             <div className='grid grid-cols-1 gap-5'>
-                                <GamesApp />
-                                <GamesApp />
-                                <GamesApp />
-                                <GamesApp />
+                                <GamesApp
+                                    image1='./dafazan.png'
+                                    image2='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
+                                    image3='./dafazan.png'
+                                    image4='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
+                                    image5='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
+                                    title='Judul disini' tech='Laravel, Bootstrap 5' desc='This is my app' />
+
                             </div>
 
                             : comp == 2 ?
 
                                 <div className='grid grid-cols-1 gap-5'>
-                                    <Arts />
-                                    <Arts />
-                                    <Arts />
-                                    <Arts />
+                                    <Arts
+                                        image1='https://cdnb.artstation.com/p/assets/images/images/053/506/003/large/dafazan-1.jpg?1662385038'
+                                        image2='https://cdna.artstation.com/p/assets/images/images/053/505/996/large/dafazan-igc3.jpg?1662385024'
+                                        image3='https://cdnb.artstation.com/p/assets/images/images/053/506/053/large/dafazan-civic4.jpg?1662385098'
+                                        image4='https://cdna.artstation.com/p/assets/images/images/053/506/030/large/dafazan-4.jpg?1662385067'
+                                        image5='https://cdnb.artstation.com/p/assets/images/images/053/506/081/large/dafazan-igc2.jpg?1662385138'
+                                        title='Honda Civic' tech='Blender' desc='I made Type R Honda Civic into 3D model with 90% acuracy' />
+
                                 </div>
                                 : comp == 3 ?
                                     <div className='grid grid-cols-1 gap-5'>

@@ -1,0 +1,88 @@
+
+
+import React, { useRef, useState } from 'react';
+
+const CustomAudioPlayer = ({ audioSource }) => {
+    const audioRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [currentTime, setCurrentTime] = useState(0);
+    const [volume, setVolume] = useState(1); // Initial volume (0 to 1)
+
+    const togglePlayPause = () => {
+        if (isPlaying) {
+            audioRef.current.pause();
+        } else {
+            audioRef.current.play();
+        }
+        setIsPlaying(!isPlaying);
+    };
+
+    const handleTimeUpdate = () => {
+        setCurrentTime(audioRef.current.currentTime);
+    };
+
+    const handleSliderChange = (e) => {
+        const newTime = e.target.value;
+        audioRef.current.currentTime = newTime;
+        setCurrentTime(newTime);
+    };
+    const handleVolumeChange = (e) => {
+        const newVolume = parseFloat(e.target.value);
+        audioRef.current.volume = newVolume;
+        setVolume(newVolume);
+    };
+
+    return (
+        <div className="p-4 bg-[#141A29] rounded-lg">
+            <audio
+                ref={audioRef}
+                src={audioSource}
+                onTimeUpdate={handleTimeUpdate}
+                onEnded={() => setIsPlaying(false)}
+            />
+            <div className="flex items-center justify-between">
+                <button
+                    onClick={togglePlayPause}
+                    className="bg-[#202B37] text-white font-bold p-4 rounded-full"
+                >
+                    {isPlaying ?
+                        <div className='h-[30px] w-[30px]'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill='#ffffff' d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z" /></svg>
+                        </div>
+                        :
+                        <div className='h-[30px] w-[30px]'>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill='#ffffff' d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" /></svg>
+                        </div>
+
+                    }
+                </button>
+                <div className="flex flex-1 mx-4 justify-center items-center">
+                    <input
+                        type="range"
+                        min="0"
+                        max={audioRef.current && audioRef.current.duration}
+                        value={currentTime}
+                        onChange={handleSliderChange}
+                        className="w-full bg-black"
+                    />
+                </div>
+                <div className='w-10 flex justify-center items-center'>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#ffffff" d="M12.43,4.1a1,1,0,0,0-1,.12L6.65,8H3A1,1,0,0,0,2,9v6a1,1,0,0,0,1,1H6.65l4.73,3.78A1,1,0,0,0,12,20a.91.91,0,0,0,.43-.1A1,1,0,0,0,13,19V5A1,1,0,0,0,12.43,4.1ZM11,16.92l-3.38-2.7A1,1,0,0,0,7,14H4V10H7a1,1,0,0,0,.62-.22L11,7.08ZM19.66,6.34a1,1,0,0,0-1.42,1.42,6,6,0,0,1-.38,8.84,1,1,0,0,0,.64,1.76,1,1,0,0,0,.64-.23,8,8,0,0,0,.52-11.79ZM16.83,9.17a1,1,0,1,0-1.42,1.42A2,2,0,0,1,16,12a2,2,0,0,1-.71,1.53,1,1,0,0,0-.13,1.41,1,1,0,0,0,1.41.12A4,4,0,0,0,18,12,4.06,4.06,0,0,0,16.83,9.17Z" /></svg>
+                </div>
+                <div className="w-20 flex justify-center items-center">
+                    <input
+                        type="range"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value={volume}
+                        onChange={handleVolumeChange}
+                        className="w-full"
+                    />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default CustomAudioPlayer;
