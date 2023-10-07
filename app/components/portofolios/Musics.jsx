@@ -141,10 +141,10 @@ function Musics({ image1, image2, image3, image4, image5, title, tech, desc, aud
                             max={audioRef.current && audioRef.current.duration}
                             value={currentTime}
                             onChange={handleSliderChange}
-                            className="w-full md:me-3"
+                            className="w-full md:me-3 appearance-none bg-blue-300 h-3 rounded-full"
                         /></div>
                         <div className='flex md:w-3/12'>
-                            <div className='w-10 flex justify-center items-center'>
+                            <div className='w-10 flex justify-center items-center text-white'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#ffffff" d="M12.43,4.1a1,1,0,0,0-1,.12L6.65,8H3A1,1,0,0,0,2,9v6a1,1,0,0,0,1,1H6.65l4.73,3.78A1,1,0,0,0,12,20a.91.91,0,0,0,.43-.1A1,1,0,0,0,13,19V5A1,1,0,0,0,12.43,4.1ZM11,16.92l-3.38-2.7A1,1,0,0,0,7,14H4V10H7a1,1,0,0,0,.62-.22L11,7.08ZM19.66,6.34a1,1,0,0,0-1.42,1.42,6,6,0,0,1-.38,8.84,1,1,0,0,0,.64,1.76,1,1,0,0,0,.64-.23,8,8,0,0,0,.52-11.79ZM16.83,9.17a1,1,0,1,0-1.42,1.42A2,2,0,0,1,16,12a2,2,0,0,1-.71,1.53,1,1,0,0,0-.13,1.41,1,1,0,0,0,1.41.12A4,4,0,0,0,18,12,4.06,4.06,0,0,0,16.83,9.17Z" /></svg>
                             </div>
                             <div className="w-full md:w-20 flex justify-center items-center">
@@ -155,7 +155,7 @@ function Musics({ image1, image2, image3, image4, image5, title, tech, desc, aud
                                     step="0.01"
                                     value={volume}
                                     onChange={handleVolumeChange}
-                                    className="w-full"
+                                    className="w-full appearance-none bg-gray-300 rounded-full"
                                 />
                             </div>
                         </div>

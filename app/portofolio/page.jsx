@@ -180,6 +180,13 @@ function Portofolio() {
                                     : comp == 4 ?
 
                                         <div className='grid grid-cols-1 gap-5'>
+                                            <Arts
+                                                image1='./assets/projok1.png'
+                                                image2='./assets/projok2.png'
+                                                image3='./assets/projok1.png'
+                                                image4='./assets/projok2.png'
+                                                image5='./assets/projok1.png'
+                                                title='Programmer Jongkok&rsquo;s Logo' tech='Illustrator' desc='I designed logo for Programmer jongkok. the meaning of the logo is that like the P and the J in it has compeletly different size and shape but still can be perfectly united with that difference. and the colors resembling Saptaloka Digital&rsquo;s colors, wich is the place that unite us' />
                                             <Musics
                                                 image1='./assets/iwish.png'
                                                 image2='./assets/iwish.png'
@@ -190,13 +197,16 @@ function Portofolio() {
                                                 tech='FL Studio, Spitfire'
                                                 desc='I Created music for game soundtrack need using Fruity Loop Studio and some samples from Spitfire Audio'
                                                 audioSource='./assets/iwish.mp3' />
-                                            <Arts
-                                                image1='./assets/projok1.png'
-                                                image2='./assets/projok2.png'
-                                                image3='./assets/projok1.png'
-                                                image4='./assets/projok2.png'
-                                                image5='./assets/projok1.png'
-                                                title='Programmer Jongkok&rsquo;s Logo' tech='Illustrator' desc='I designed logo for Programmer jongkok. the meaning of the logo is that like the P and the J in it has compeletly different size and shape but still can be perfectly united with that difference. and the colors resembling Saptaloka Digital&rsquo;s colors, wich is the place that unite us' />
+                                            <Musics
+                                                image1='./assets/utb.png'
+                                                image2='./assets/utb.png'
+                                                image3='./assets/utb.png'
+                                                image4='./assets/utb.png'
+                                                image5='./assets/utb.png'
+                                                title='Used To Be'
+                                                tech='FL Studio, Spitfire'
+                                                desc='I Created music for game soundtrack need using Fruity Loop Studio and some samples from Spitfire Audio'
+                                                audioSource='./assets/utb.mp3' />
                                         </div> : false
 
                 }
