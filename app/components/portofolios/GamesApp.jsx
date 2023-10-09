@@ -45,9 +45,9 @@ function GamesApp({ image1, image2, image3, image4, image5, title, tech, desc })
                 style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
                 <div className='w-full h-full flex-grow'></div>
                 <div className='flex'>
-                    <button onClick={handleClickr} className='w-1/12 bgl txt1 hover:text-2xl rounded-es-xl flex justify-center items-center text-'><p >&lt;</p></button>
+                    <button onClick={handleClickr} className='hoverin w-1/12 bgl txt1 hover:text-2xl rounded-es-xl flex justify-center items-center text-'><p >&lt;</p></button>
                     <div className='w-10/12 h-[30px]'></div>
-                    <button onClick={handleClick} className='w-1/12 bgl txt1 hover:text-2xl rounded-ee-xl flex justify-center items-center text-'><p >&gt;</p></button>
+                    <button onClick={handleClick} className='hoverin w-1/12 bgl txt1 hover:text-2xl rounded-ee-xl flex justify-center items-center text-'><p >&gt;</p></button>
                 </div>
             </motion.div>
 

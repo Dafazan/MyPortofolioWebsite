@@ -43,7 +43,7 @@ const CustomAudioPlayer = ({ audioSource }) => {
             <div className="flex items-center justify-between">
                 <button
                     onClick={togglePlayPause}
-                    className="bg-[#202B37] text-white font-bold p-4 rounded-full"
+                    className="bg-[#202B37] text-white font-bold p-4 rounded-full hoverin"
                 >
                     {isPlaying ?
                         <div className='h-[30px] w-[30px]'>

@@ -23,6 +23,7 @@ body {
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   font-family: 'Sofia Sans', sans-serif;
+  cursor: none;
 }
 
 .bgl {
@@ -56,4 +57,37 @@ body {
   background-image: url('/S.png');
   background-size: cover;
 
+}
+
+.custom-cursor {
+  /* cursor: url('/assets/cursor.png'), auto; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.cursor-text {
+  font-size: 5px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  display: none;
+}
+
+button {
+  cursor: none;
+}
+
+a {
+  cursor: none;
 }
