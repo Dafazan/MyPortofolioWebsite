@@ -152,7 +152,7 @@ function Portofolio() {
                                             image3='https://cdna.artstation.com/p/assets/images/images/040/695/712/large/dafazan-mini-city-compnonwm.jpg?1629640055'
                                             image4='https://cdnb.artstation.com/p/assets/images/images/040/695/721/large/dafazan-mini-city-compnonwm2.jpg?1629640087'
                                             image5='https://cdna.artstation.com/p/assets/images/images/040/695/712/large/dafazan-mini-city-compnonwm.jpg?1629640055'
-                                            title='Sunset Scene' tech='Blender, Photoshop' desc='I Created a city scene, I rendered daytime version and nightime version and composite it using Adobe Photoshop' />
+                                            title='City Scene' tech='Blender, Photoshop' desc='I Created a city scene, I rendered daytime version and nightime version and composite it using Adobe Photoshop' />
 
                                     </div>
                                     : comp == 3 ?
