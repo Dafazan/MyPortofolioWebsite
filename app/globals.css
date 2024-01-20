@@ -6,7 +6,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,77 +16,239 @@
   }
 }
 
+/* CSS */
+/* Hide the scrollbar track */
+::-webkit-scrollbar {
+  width: 5px;
+  /* Set the width of the scrollbar */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+  /* Set the color of the scrollbar thumb */
+  border-radius: 5px;
+  /* Set the border-radius for rounded corners */
+}
+
+/* Optionally, you can style the scrollbar track background (though it's invisible in this case) */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Set the background color of the scrollbar track to make it invisible */
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-  font-family: 'Sofia Sans', sans-serif;
-  cursor: none;
+  color: white;
+  background: rgb(0, 21, 128);
+  background: radial-gradient(circle, rgba(0, 21, 128, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  overflow: hidden;
 }
 
-.bgl {
-  background: rgb(20, 26, 41);
+.body {
+  background: rgb(0, 21, 128);
+  background: radial-gradient(circle, rgba(0, 21, 128, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
-.bgd {
-  background: rgb(12, 15, 26);
+.base1 {
+  background-color: black;
 }
 
-.bgdl {
-  background: rgb(32, 43, 55);
+.base2 {
+  background: black;
 }
 
-.bglb {
-  background: rgb(0,
-      240,
-      255);
+.radiobutton {
+  appearance: "none";
+  border: "2px solid black";
+  border-radius: "5px";
+  padding: "8px 16px";
+  cursor: "pointer";
+  outline: "none";
+  transition: "border 0.3s";
 }
 
-.txt1 {
-  color: rgb(0, 240, 255);
-}
-
-.txt1d {
-  color: rgb(0, 116, 123);
-}
-
-.sopay {
-
-  background-image: url('/S.png');
-  background-size: cover;
+.bgblur {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 
 }
 
-.custom-cursor {
-  /* cursor: url('/assets/cursor.png'), auto; */
-  position: fixed;
+.bgblur-i {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  display: inline-block;
+  overflow: hidden;
+}
+
+.blurwindow {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-color: rgb(59 130 246);
+}
+
+.bgblurblue {
+  /* From https://css.glass */
+  background: rgba(30, 58, 138, 0.3);
+  backdrop-filter: blur(8px);
+  display: inline-block;
+  overflow: hidden;
+}
+
+.bgblurbluef {
+  /* From https://css.glass */
+  background: rgba(30, 58, 138, 0.3);
+  backdrop-filter: blur(8px);
+
+}
+
+.bgblurred {
+  /* From https://css.glass */
+  background: rgba(220, 38, 38, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.bgblurgreen {
+  /* From https://css.glass */
+  background: rgba(0, 117, 6, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.shadow {
+  box-shadow: 0px 2px 91px -10px rgba(0, 0, 0, 0.31) inset;
+  -webkit-box-shadow: -1px 2px 91px -10px rgba(0, 0, 0, 0.31) inset;
+  -moz-box-shadow: -1px 2px 91px -10px rgba(0, 0, 0, 0.31) inset;
+}
+
+.private {
+  color: rgb(220, 38, 38);
+  ;
+}
+
+.public {
+  color: rgb(21, 250, 0);
+  ;
+}
+
+.noteworthy {
+  color: rgb(21, 250, 0);
+}
+
+.priority {
+  color: rgb(250, 246, 0);
+}
+
+.mandatory {
+  color: rgb(220 38 38);
+}
+
+
+@keyframes blink {
+  0% {
+    color: rgb(220 38 38);
+  }
+
+  20% {
+    color: rgb(255, 187, 187);
+  }
+
+  40% {
+    color: rgb(220 38 38);
+  }
+
+  60% {
+    color: rgb(255, 187, 187);
+  }
+
+  80% {
+    color: rgb(220 38 38);
+  }
+
+  100% {
+    color: rgb(255, 187, 187);
+  }
+}
+
+.blink-once {
+  animation: blink 0.7s;
+}
+
+@keyframes alert {
+  0% {
+    height: 10%;
+  }
+
+  100% {
+    height: 83.333333%;
+  }
+}
+
+.alert-anim {
+  animation: alert 0.5s;
+}
+
+
+button .ql-stroke,
+.ql-picker-label .ql-stroke {
+  fill: none;
+  stroke: rgb(59, 130, 246) !important;
+}
+
+button:hover .ql-stroke,
+.ql-picker-label:hover .ql-stroke {
+  fill: none;
+  stroke: rgb(21, 250, 0) !important;
+}
+
+.ql-active .ql-stroke {
+  fill: none;
+  stroke: rgb(21, 250, 0) !important;
+}
+
+button:hover .ql-fill,
+.ql-picker-label:hover .ql-fill {
+  fill: rgb(21, 250, 0) !important;
+  stroke: none;
+}
+
+button .ql-fill,
+.ql-picker-label .ql-fill {
+  fill: rgb(59, 130, 246) !important;
+  stroke: none;
+}
+
+.ql-active .ql-fill {
+  fill: rgb(21, 250, 0) !important;
+  stroke: none;
+}
+
+.ql-toolbar.ql-snow {
+  font-family: inherit;
+
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
+  z-index: 1;
 }
 
-.cursor-text {
-  font-size: 5px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  display: none;
+.ql-container {
+  color: rgb(22, 163, 74);
+  font-family: inherit;
+  font-size: inherit;
 }
 
-button {
-  cursor: none;
+.ql-container.ql-snow {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+
 }
 
-a {
-  cursor: none;
+.ql-editor {
+  overflow-y: visible;
+
 }
