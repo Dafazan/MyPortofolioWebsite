@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 function Profile() {
     return (
         <motion.div
-            initial={{ width: 10, opacity: 50 }}
-            animate={{ width: 320, opacity: 100 }}
+            initial={{ width: 10, opacity: 50, scale: 0.5 }}
+            animate={{ width: 320, opacity: 100, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.5 }}
 
             className='w-80 flex flex-col gap-1'>

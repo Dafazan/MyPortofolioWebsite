@@ -16,6 +16,7 @@ import SideButton from './components/Layouts/Buttons/SideButton';
 import MobileInnerLayout from './components/Layouts/MobileInnerLayout';
 import Profile from './components/pages/profile';
 import ProfileIntro from './components/pages/profileIntro';
+import Employment from './components/pages/employment';
 
 export default function Home() {
 
@@ -49,12 +50,20 @@ export default function Home() {
     )
 }
 
+
 function Page() {
     const [isProfileImg, setProfileImg] = useState(false);
+    const [isEmployment, setIsEmployment] = useState(false)
 
-    // Step 3: Create a function to handle the toggle action
+
     const handleProfileImg = () => {
-        setProfileImg(!isProfileImg); // Toggle the state (invert its value)
+        setProfileImg(!isProfileImg);
+        setIsEmployment(false)
+            ;
+    };
+    const handleEmployment = () => {
+        setProfileImg(false);
+        setIsEmployment(!isEmployment);
     };
     return (
         <div className='w-full h-full flex flex-col justify-center overflow-hidden'>
@@ -80,7 +89,7 @@ function Page() {
                     <div className='w-full h-[2px] bg-blue-600'></div>
                     <div className='flex justify-between text-start text-sm'>
                         <div><p>EMPLOYMENT HISTORY</p></div>
-                        <button className='hover:text-lime-500'><p>SHOW DATA &gt;</p></button>
+                        <button onClick={handleEmployment} className='hover:text-lime-500'><p>SHOW DATA &gt;</p></button>
                     </div>
                     <div className='flex justify-between text-start text-sm'>
                         <div><p>EDUCATION RECORDS</p></div>
@@ -110,6 +119,9 @@ function Page() {
                 </div>
                 {isProfileImg ? (
                     <Profile />
+                ) : null}
+                {isEmployment ? (
+                    <Employment />
                 ) : null}
 
 
