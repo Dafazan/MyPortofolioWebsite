@@ -1,7 +1,7 @@
 'use client'
 import dynamic from 'next/dynamic';
 import Image from 'next/image'
-import React, { Suspense } from "react";
+import React, { Suspense, } from "react";
 import CardInfo from '../app/components/frontcard';
 import Splide from '@splidejs/splide'
 import { useEffect, useRef, useState } from 'react';
@@ -18,7 +18,137 @@ import Profile from './components/pages/profile';
 import ProfileIntro from './components/pages/profileIntro';
 import Employment from './components/pages/employment';
 
+
+function Display({ s1, s2, s3 }) {
+    return (
+        <>
+            <DesktopLayout
+                button2={<SideButton text={s1} />}
+                button3={<SideButton text={s2} />}
+                button4={<SideButton text={s3} />}
+                button5={<SideButton text={'GALLERY'} />}
+                button8={<SideButton text={'CONTACT'} />}
+                button9={<SideButton text={'SOCIAL'} />}
+                button10={<SideButton text={'ACT9'} />}
+                button11={<a href='#top'>top</a>}
+            >
+                <Page />
+
+            </DesktopLayout>
+        </>
+    )
+}
 export default function Home() {
+
+
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        const handleWheel = () => {
+            setScrollY(window.scrollY);
+        };
+
+        const handleTouchMove = () => {
+            setScrollY(window.scrollY);
+        };
+
+        // Attach event listeners for scroll, wheel, and touchmove events
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('wheel', handleWheel);
+        window.addEventListener('touchmove', handleTouchMove);
+
+        // Detach event listeners when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('wheel', handleWheel);
+            window.removeEventListener('touchmove', handleTouchMove);
+        };
+    }, []);
+    const [scale, setScale] = useState('scale-[1]');
+    const [backgroundCol, setBackgroundCol] = useState('black');
+    const [page, setPage] = useState(false);
+    const [paget, setPaget] = useState("false");
+
+    const [scrollDivY, setScrollDivY] = useState(0);
+    const scrollDivRef = useRef(null);
+
+    const handlepage = () => {
+        setPage(true);
+        setPaget('true');
+    }
+    const handlepageRev = () => {
+        setPage(false);
+        setPaget('false');
+    }
+    useEffect(() => {
+        const handleScroll = () => {
+            const newScrollY = window.scrollY;
+            setScrollY(newScrollY);
+
+            // Calculate the scale based on the scroll position
+            let newScale = 'scale-[1]';
+            if (newScrollY >= 0 && newScrollY < 150) {
+                newScale = 'scale-[1]';
+            } else if (newScrollY >= 150 && newScrollY < 300) {
+                newScale = 'scale-[0.9]';
+            } else if (newScrollY >= 300 && newScrollY < 450) {
+                newScale = 'scale-[0.8]';
+            } else if (newScrollY >= 450 && newScrollY < 600) {
+                newScale = 'scale-[0.6]';
+            } else if (newScrollY >= 600) {
+                newScale = 'scale-[0.6]';
+            }
+            setScale(newScale);
+
+            if (newScrollY >= 600) {
+                setBackgroundCol('blue-500');
+                handlepage();
+            } else {
+                setBackgroundCol('black');
+
+            }
+
+            const handleDivScroll = () => {
+                const scrollDiv = scrollDivRef.current;
+                if (scrollDiv) {
+                    setScrollDivY(scrollDiv.scrollTop);
+                }
+            };
+            const scrollDiv = scrollDivRef.current;
+            if (scrollDiv) {
+                scrollDiv.addEventListener('scroll', handleDivScroll);
+            }
+
+            return () => {
+                window.removeEventListener('scroll', handleWindowScroll);
+                if (scrollDiv) {
+                    scrollDiv.removeEventListener('scroll', handleDivScroll);
+                }
+            };
+
+        };
+
+        // Attach the scroll event listener when the component mounts
+        window.addEventListener('scroll', handleScroll);
+
+        // Detach the scroll event listener when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []); // Empty dependency array ensures this effect runs only once on component mount
+
+
+    // useEffect(() => {
+    //     if (scrollCount >= 2) {
+    //         // Adjust the scale based on the scroll count
+    //         const newScale = Math.max(1 - (scrollPosition - SCROLL_THRESHOLD) / 1000, 0.5); // Adjust the divisor for different scaling speeds
+    //         setScale(newScale);
+    //     }
+    // }, [scrollCount, scrollPosition]);
 
     return (
         <>
@@ -31,19 +161,62 @@ export default function Home() {
                     </MobileInnerLayout>
                 </MobileLayout>
             ) : (
-                <DesktopLayout
-                    button2={<SideButton text={'ABOUT'} />}
-                    button3={<SideButton text={'SKILLS'} />}
-                    button4={<SideButton text={'WORKS'} />}
-                    button5={<SideButton text={'GALLERY'} />}
-                    button8={<SideButton text={'CONTACT'} />}
-                    button9={<SideButton text={'SOCIAL'} />}
-                    button10={<SideButton text={'ACT9'} />}
-                    button11={<SideButton text={'ACT10'} />}
-                >
-                    <Page />
+                <>
+                    <div className='fixed w-full text-green-500 text-center z-50'>{scrollY} - {scale} - {paget} - {scrollDivY}</div>
+                    {page ? <>
+                        <div ref={scrollDivRef} className="fixed h-screen body overflow-y-scroll top-0 w-screen ">
+                            <div className="w-full h-full relative">
 
-                </DesktopLayout>
+                                <div className=" w-full h-screen scale-[0.6] bgmn absolute">
+
+                                    <Display
+                                        s1={scrollY}
+                                        s2={scale}
+                                        s3={page}
+                                    />
+                                </div>
+                                <div className='w-full h-full flex justify-center items-center absolute '>
+                                    <div onClick={handlepageRev} className='mx-14 mt-5 w-screen h-screen rounded-3xl border-[40px]  border-slate-600 hover:border-slate-500 scale-[0.7]'></div>
+                                </div>
+                            </div>
+                            <div className='h-screen w-screen bg-red-900'>asdjkasjdkasjdkasdjkasd</div>
+                            <div className='h-screen w-screen bg-red-900'>asdjkasjdkasjdkasdjkasd</div>
+                            <div className='h-screen w-screen bg-red-900'>asdjkasjdkasjdkasdjkasd</div>
+                            <div className='h-screen w-screen bg-red-900'>asdjkasjdkasjdkasdjkasd</div>
+                            <div className='h-screen w-screen bg-red-900'>asdjkasjdkasjdkasdjkasd</div>
+                        </div>
+                    </> : <>
+
+
+                        <div id='#top' className={`w-full duration-100 bg-${backgroundCol} fixed`}>
+
+                            <div className={`bgmn inset-0 transform transition-transform ${scale}`}
+
+                            >
+                                <Display
+                                    s1={scrollY}
+                                    s2={scale}
+                                    s3={page}
+                                />
+                            </div>
+                            <div className='w-screnn h-screen'></div>
+                            <div className='w-screnn h-screen'></div>
+                            <div className='w-screnn h-screen'></div>
+                            <div className='w-screnn h-screen'></div>
+                            <div className='w-screnn h-screen'></div>
+                        </div>
+                        <div className='w-screnn h-screen'></div>
+                        <div className='w-screnn h-screen'></div>
+                        <div className='w-screnn h-screen'></div>
+                        <div className='w-screnn h-screen'></div>
+                        <div className='w-screnn h-screen'></div>
+                        <div className='w-screnn h-screen'></div>
+                        <div className='w-screnn h-screen'></div>
+                        <div className='w-screnn h-screen'></div>
+                    </>}
+
+
+                </>
             )}
 
         </>
@@ -66,7 +239,7 @@ function Page() {
         setIsEmployment(!isEmployment);
     };
     return (
-        <div className='w-full h-full flex flex-col justify-center overflow-hidden'>
+        <div className='w-full h-full flex flex-col justify-center '>
             <div className="flex gap-3">
 
                 <div className='flex flex-col w-80 bgblur border-y-2 border-red-600 p-2 '>
