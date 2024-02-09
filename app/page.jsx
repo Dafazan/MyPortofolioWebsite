@@ -164,8 +164,15 @@ export default function Home() {
                 <>
                     <div className='fixed w-full text-green-500 text-center z-50'>{scrollY} - {scale} - {paget} - {scrollDivY}</div>
                     {page ? <>
-                        <div ref={scrollDivRef} className="fixed h-screen body overflow-y-scroll top-0 w-screen ">
+                        <div ref={scrollDivRef} className={`fixed h-screen duration-1000 ease-in-out ${scrollDivY >= 1000 ? 'bg-[#FFE6D3] ' : 'bg-[#5B4E32] '} overflow-y-scroll overflow-x-hidden top-0 w-screen `}>
                             <div className="w-full h-full relative">
+                                <img className='w-full absolute -translate-y-32' src="/bgw2.png" alt="" />
+
+                                <div className='w-full h-screen scale-[0.7] absolute px-10'>
+                                    <div className='w-full h-full bg-[#13110b] rounded-xl p-2 flex flex-col justify-end items-center'>
+                                        <button onClick={handlepageRev} className='bg-[#0a0906] hover:bg-black rounded-xl px-4 py-1'>Enter Fullscreen Mode</button>
+                                    </div>
+                                </div>
 
                                 <div className=" w-full h-screen scale-[0.6] bgmn absolute">
 
@@ -175,15 +182,30 @@ export default function Home() {
                                         s3={page}
                                     />
                                 </div>
-                                <div className='w-full h-full flex justify-center items-center absolute '>
-                                    <div onClick={handlepageRev} className='mx-14 mt-5 w-screen h-screen rounded-3xl border-[40px]  border-slate-600 hover:border-slate-500 scale-[0.7]'></div>
+
+
+                            </div>
+                            <div className='h-3/6 w-screen '>
+
+                            </div>
+                            <div className=' w-screen p-32 text-[#35260F]'>
+                                <h1 className='text-5xl font-bold'>DAFFA</h1>
+                                <h1 className='text-5xl font-bold'>FAUZAN</h1>
+                                <div className='w-full flex gap-7 mt-6'>
+                                    <div className='w-3/12 h-64 rounded-2xl bg-[#D9B57F]'></div>
+                                    <div className='w-9/12 h-64 rounded-2xl bg-[#7FC7D9]'></div>
+                                </div>
+                                <div className='w-full flex gap-7 mt-7'>
+                                    <div className='w-7/12 h-64 rounded-2xl bg-[#D97F7F]'></div>
+                                    <div className='w-5/12 h-64 rounded-2xl bg-[#7FD9A8]'></div>
                                 </div>
                             </div>
-                            <div className='h-screen w-screen bg-red-900'>asdjkasjdkasjdkasdjkasd</div>
-                            <div className='h-screen w-screen bg-red-900'>asdjkasjdkasjdkasdjkasd</div>
-                            <div className='h-screen w-screen bg-red-900'>asdjkasjdkasjdkasdjkasd</div>
-                            <div className='h-screen w-screen bg-red-900'>asdjkasjdkasjdkasdjkasd</div>
-                            <div className='h-screen w-screen bg-red-900'>asdjkasjdkasjdkasdjkasd</div>
+                            <div className='h-screen w-screen px-32'>
+
+
+                            </div>
+                            <div className='h-screen w-screen'>asdjkasjdkasjdkasdjkasd</div>
+                            <div className='h-screen w-screen'>asdjkasjdkasjdkasdjkasd</div>
                         </div>
                     </> : <>
 
@@ -198,6 +220,9 @@ export default function Home() {
                                     s2={scale}
                                     s3={page}
                                 />
+
+
+
                             </div>
                             <div className='w-screnn h-screen'></div>
                             <div className='w-screnn h-screen'></div>
@@ -209,10 +234,7 @@ export default function Home() {
                         <div className='w-screnn h-screen'></div>
                         <div className='w-screnn h-screen'></div>
                         <div className='w-screnn h-screen'></div>
-                        <div className='w-screnn h-screen'></div>
-                        <div className='w-screnn h-screen'></div>
-                        <div className='w-screnn h-screen'></div>
-                        <div className='w-screnn h-screen'></div>
+
                     </>}
 
 
