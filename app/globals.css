@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -50,6 +51,15 @@ body {
   background: rgb(0, 21, 128);
   background: radial-gradient(circle, rgba(0, 21, 128, 1) 0%, rgba(0, 0, 0, 1) 100%);
 
+}
+
+.bgfrst {
+  background: radial-gradient(circle, rgb(97, 125, 166) 0%, rgb(66, 81, 106) 100%);
+
+}
+
+.font-abril {
+  font-family: 'Abril Fatface', serif;
 }
 
 .body {
