@@ -51,27 +51,27 @@ function UiUx() {
         <div className="w-full flex flex-col gap-3 mt-3">
           <div className="grid md:grid-cols-2 grid-cols-1 gap-7">
             <Cardsport
-              image="https://cdna.artstation.com/p/assets/images/images/072/923/394/large/dafazan-keyrender1ex.jpg?1708517799"
+              image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02315.JPG?alt=media&token=4273e535-eb2b-4ab7-81b0-371d8244af96"
               title="SAPTALOKA WEB"
               type="UI/UX REDESIGN"
             />
             <Cardsport
-              image="https://cdnb.artstation.com/p/assets/images/images/072/935/135/large/dafazan-grassdesk-01.jpg?1708537199"
+              image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02323.JPG?alt=media&token=f4cf98e2-70e1-4ab3-aecf-c0ddc492c5c2"
               title="TELKOM INFRA INVENTORY"
-              type="UI/UX DESIGN"
+              type="UI/UX REDESIGN"
             />
             <Cardsport
-              image="https://cdnb.artstation.com/p/assets/images/images/040/695/679/large/dafazan-wood-clean.jpg?1629639957"
+              image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02324.JPG?alt=media&token=b1ba1a42-b263-4b84-83fb-a0f9f506315a"
               title="CBL ERP MANUFATURE"
               type="UI/UX DESIGN"
             />
             <Cardsport
-              image="https://cdnb.artstation.com/p/assets/images/images/072/934/887/large/dafazan-blackhole-c1.jpg?1708536780"
+              image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02320.JPG?alt=media&token=641bfca6-36bb-49f2-86bd-c2ba7e7fbffa"
               title="IBADAHKU"
               type="UI/UX REDESIGN"
             />
             <Cardsport
-              image="https://cdnb.artstation.com/p/assets/images/images/072/934/797/large/dafazan-cls1.jpg?1708536626"
+              image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02322.JPG?alt=media&token=80ac0f15-e023-40e0-adc3-46a2cceaac5b"
               title="WWTP SIM"
               type="GUI DESIGN"
             />

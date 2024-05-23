@@ -51,27 +51,27 @@ function WebDev() {
         <div className="w-full flex flex-col gap-3 mt-3">
           <div className="grid md:grid-cols-2 grid-cols-1 gap-7">
             <Cardsport
-              image="https://cdna.artstation.com/p/assets/images/images/072/923/394/large/dafazan-keyrender1ex.jpg?1708517799"
+              image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02315.JPG?alt=media&token=4273e535-eb2b-4ab7-81b0-371d8244af96"
               title="SAPTALOKA WEB"
               type="FRONTEND DEV"
             />
             <Cardsport
-              image="https://cdnb.artstation.com/p/assets/images/images/072/935/135/large/dafazan-grassdesk-01.jpg?1708537199"
+              image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02310.JPG?alt=media&token=7099400e-f172-4249-ab14-b52ebfd41583"
               title="QUNFILMS WEB"
               type="FRONTEND DEV"
             />
             <Cardsport
-              image="https://cdnb.artstation.com/p/assets/images/images/040/695/679/large/dafazan-wood-clean.jpg?1629639957"
+              image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02320.JPG?alt=media&token=641bfca6-36bb-49f2-86bd-c2ba7e7fbffa"
               title="IBADAHKU WEB"
               type="FRONTEND DEV"
             />
             <Cardsport
-              image="https://cdnb.artstation.com/p/assets/images/images/072/934/887/large/dafazan-blackhole-c1.jpg?1708536780"
+              image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02312.JPG?alt=media&token=1f9a104b-b171-41b5-9c78-78ef05ac989c"
               title="TYS CONS WEB"
               type="FRONTEND DEV"
             />
             <Cardsport
-              image="https://cdnb.artstation.com/p/assets/images/images/072/934/797/large/dafazan-cls1.jpg?1708536626"
+              image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/339486725_198567016243678_3687514765136256031_n.jpg?alt=media&token=3b899f92-3687-4920-9feb-0e895a888be5"
               title="DVOTEE WEB"
               type="FULLSTACK DEV"
             />
