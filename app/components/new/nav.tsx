@@ -51,14 +51,20 @@ function Navbary() {
       <div
         className={`${
           scrollLocation >= 677 ? "bgblur" : "bg-[#141414]"
-        } duration-100 w-full h-16 rounded-sm border border-[#6e604d] flex justify-between items-center px-3 text-[#e0c49c]`}
+        } duration-100 w-full h-16 rounded-sm border border-[#6e604d] flex justify-between items-center px-3 text-[#e0c49c]  `}
       >
         <div className="md:text-4xl text-xl font-thin">
-          <a href="/#">DAFAZAN</a>
+          <a className="hover:text-[#ffe6c2]" href="/#">
+            DAFAZAN
+          </a>
         </div>
         <div className="flex md:gap-4 gap-3 h-full md:p-2 py-3 md:py-2 items-center font-thin">
-          <a href="/#">WORK</a>
-          <a href="/#">ABOUT ME</a>
+          <a className="hover:text-[#ffe6c2]" href="/#">
+            WORK
+          </a>
+          <a className="hover:text-[#ffe6c2]" href="/#">
+            ABOUT ME
+          </a>
 
           <a
             className="bg-[#e0c49c] hover:bg-transparent hover:text-[#e0c49c] border border-[#e0c49c] text-[#6e604d] h-full rounded-sm md:px-3 px-2 flex justify-center items-center"

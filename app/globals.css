@@ -9,6 +9,10 @@ body {
   color: #e0c49c;
 }
 
+.nocursor {
+  cursor: none;
+}
+
 /* CSS */
 /* Hide the scrollbar track */
 ::-webkit-scrollbar {

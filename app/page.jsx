@@ -6,7 +6,7 @@ import Selectedworks from './components/new/selectedworks'
 function Home() {
   return (
     <>
-     <Navbary/>
+ 
     <div className='md:px-16 px-3 py-10'>
     <Landpage/>
    <Selectedworks/>
