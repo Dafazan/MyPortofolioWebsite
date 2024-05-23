@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-function Navbary() {
+function NavbaryS() {
   const [isSidebar, setIsSidebar] = useState(false);
 
   const [linkhover, setLinkhover] = useState(0);
@@ -49,9 +49,7 @@ function Navbary() {
   return (
     <div className="fixed w-full flex justify-center py-3 md:px-16 px-3 z-50">
       <div
-        className={`${
-          scrollLocation >= 677 ? "bgblur" : "bg-[#141414]"
-        } duration-100 w-full h-16 rounded-sm border border-[#6e604d] flex justify-between items-center px-3 text-[#e0c49c]  `}
+        className={`bgblur duration-100 w-full h-16 rounded-sm border border-[#6e604d] flex justify-between items-center px-3 text-[#e0c49c]  `}
       >
         <div className="md:text-4xl text-xl font-thin">
           <a className="hover:text-[#ffe6c2]" href="/#">
@@ -78,4 +76,4 @@ function Navbary() {
   );
 }
 
-export default Navbary;
+export default NavbaryS;

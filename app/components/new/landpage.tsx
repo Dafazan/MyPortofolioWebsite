@@ -32,10 +32,10 @@ function Landpage() {
                 <div className="w-full flex flex-col md:items-start items-start justify-center">
                   <h1 className="text-[70px] font-semibold">Designer</h1>
 
-                  <a className="font-thin text-2xl" href="/#">
+                  <a className="font-thin text-2xl" href="/portofolio/uiux">
                     UI/UX Designer
                   </a>
-                  <a className="font-thin text-2xl" href="/#">
+                  <a className="font-thin text-2xl" href="/portofolio/">
                     3D Generalist
                   </a>
                 </div>
@@ -43,10 +43,10 @@ function Landpage() {
                 <div className="w-full flex flex-col md:items-end items-start justify-center">
                   <h1 className="text-[70px] font-semibold">Developer</h1>
 
-                  <a className="font-thin text-2xl" href="/#">
+                  <a className="font-thin text-2xl" href="/portofolio/webdev">
                     Web Developer
                   </a>
-                  <a className="font-thin text-2xl" href="/#">
+                  <a className="font-thin text-2xl" href="/portofolio/gamedev">
                     Unity Developer
                   </a>
                 </div>
@@ -89,7 +89,7 @@ function Landpage() {
                     }
                     initial={{ x: "-100vw" }}
                     className="font-thin text-3xl hover:text-[#ffe6c2] hover:font-regular"
-                    href="/#"
+                    href="/portofolio/uiux"
                   >
                     UI/UX Designer
                   </motion.a>
@@ -100,7 +100,7 @@ function Landpage() {
                     initial={{ x: "-100vw" }}
                     transition={{ delay: 0.02, duration: 0.5 }}
                     className="font-thin text-3xl hover:text-[#ffe6c2] hover:font-regular"
-                    href="/#"
+                    href="/portofolio/"
                   >
                     3D Generalist
                   </motion.a>
@@ -168,7 +168,7 @@ function Landpage() {
                     }
                     initial={{ x: "100vw" }}
                     className="font-thin text-3xl hover:text-[#ffe6c2] hover:font-regular"
-                    href="/#"
+                    href="/portofolio/webdev"
                   >
                     Web Developer
                   </motion.a>
@@ -179,7 +179,7 @@ function Landpage() {
                     initial={{ x: "100vw" }}
                     transition={{ delay: 0.02, duration: 0.5 }}
                     className="font-thin text-3xl hover:text-[#ffe6c2] hover:font-regular"
-                    href="/#"
+                    href="/portofolio/gamedev"
                   >
                     Unity Developer
                   </motion.a>
