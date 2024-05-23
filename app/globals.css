@@ -39,6 +39,12 @@ body {
   backdrop-filter: blur(10px);
   will-change: backdrop-filter;
 }
+.bgblurc {
+  /* From https://css.glass */
+  background: rgba(133, 116, 93, 0.066);
+  backdrop-filter: blur(3px);
+  will-change: backdrop-filter;
+}
 
 .bgblur2 {
   /* From https://css.glass */
