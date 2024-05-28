@@ -53,7 +53,7 @@ function WebDev() {
             <Cardsport
               image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02315.JPG?alt=media&token=4273e535-eb2b-4ab7-81b0-371d8244af96"
               title="SAPTALOKA WEB"
-              type="FRONTEND DEV"
+              type="FULLSTACK DEV"
             />
             <Cardsport
               image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02310.JPG?alt=media&token=7099400e-f172-4249-ab14-b52ebfd41583"
