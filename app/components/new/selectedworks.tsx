@@ -12,29 +12,39 @@ function Selectedworks() {
           type="3D ILLUSTRATION"
         />
         <Cardsport
-          image="https://cdnb.artstation.com/p/assets/images/images/072/935/135/large/dafazan-grassdesk-01.jpg?1708537199"
-          title="Hill Of Past"
-          type="3D ILLUSTRATION"
+          image="https://cdna.artstation.com/p/assets/images/images/053/506/046/large/dafazan-6.jpg?1662385090"
+          title="Honda Civic"
+          type="3D ASSETS"
         />
         <Cardsport
-          image="https://cdnb.artstation.com/p/assets/images/images/040/695/679/large/dafazan-wood-clean.jpg?1629639957"
-          title="Just Another Sunset"
-          type="3D ILLUSTRATION"
+          image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02315.JPG?alt=media&token=4273e535-eb2b-4ab7-81b0-371d8244af96"
+          title="SAPTALOKA WEB"
+          type="UI/UX & FULLSTACK DEV"
         />
         <Cardsport
-          image="https://cdnb.artstation.com/p/assets/images/images/072/934/887/large/dafazan-blackhole-c1.jpg?1708536780"
-          title="Gargantuan"
-          type="3D ILLUSTRATION"
+          image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02310.JPG?alt=media&token=7099400e-f172-4249-ab14-b52ebfd41583"
+          title="QUNFILMS WEB"
+          type="FRONTEND DEV"
         />
         <Cardsport
-          image="https://cdnb.artstation.com/p/assets/images/images/072/934/797/large/dafazan-cls1.jpg?1708536626"
-          title="The Class"
-          type="3D ISOMETRIC"
+          image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02323.JPG?alt=media&token=f4cf98e2-70e1-4ab3-aecf-c0ddc492c5c2"
+          title="TELKOM INFRA INVENTORY"
+          type="UI/UX REDESIGN"
         />
         <Cardsport
-          image="https://cdna.artstation.com/p/assets/images/images/039/971/138/large/dafazan-comp.jpg?1627478459"
-          title="The Bridge"
-          type="3D ISOMETRIC"
+          image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02324.JPG?alt=media&token=b1ba1a42-b263-4b84-83fb-a0f9f506315a"
+          title="CBL ERP MANUFATURE"
+          type="UI/UX DESIGN"
+        />
+        <Cardsport
+          image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/DSC02322.JPG?alt=media&token=80ac0f15-e023-40e0-adc3-46a2cceaac5b"
+          title="WWTP SIM"
+          type="3D VISUALIZER"
+        />
+        <Cardsport
+          image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/339486725_198567016243678_3687514765136256031_n.jpg?alt=media&token=3b899f92-3687-4920-9feb-0e895a888be5"
+          title="VESPA AR 3D"
+          type="UNITY DEV"
         />
       </div>
     </div>

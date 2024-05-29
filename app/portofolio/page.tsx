@@ -90,7 +90,6 @@ function Portofolio() {
               title="Earth and Moon"
               type="3D ILLUSTRATION"
             />
-
             <Cardsport
               image="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/cam.png?alt=media&token=3cab29b7-4fbb-4ec9-9a10-e14fdfcb4b4d"
               title="CAMERA"

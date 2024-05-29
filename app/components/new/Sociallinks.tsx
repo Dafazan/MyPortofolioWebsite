@@ -3,7 +3,10 @@ import React from "react";
 function Sociallinks() {
   return (
     <div className="flex gap-2 px-14">
-      <div className="scale-75">
+      <a
+        href="https://www.linkedin.com/in/muhamad-daffa-fauzan-216529245/"
+        className="scale-75"
+      >
         <svg
           width="38"
           height="38"
@@ -23,8 +26,8 @@ function Sociallinks() {
             </clipPath>
           </defs>
         </svg>
-      </div>
-      <div className="scale-75">
+      </a>
+      <a href="https://www.instagram.com/dafazanlbs" className="scale-75">
         <svg
           width="38"
           height="38"
@@ -52,7 +55,7 @@ function Sociallinks() {
             </clipPath>
           </defs>
         </svg>
-      </div>
+      </a>
       <div className="scale-75">
         <svg
           width="38"
