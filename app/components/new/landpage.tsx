@@ -57,7 +57,7 @@ function Landpage() {
             <>
               {isMobile ? (
                 <>
-                  <div className="w-full h-[90vh] mt-16 flex flex-col justify-between items-center">
+                  <div className="w-full h-[90vh] mt-16 flex flex-col justify-between z-40 items-center">
                     <div className="w-full flex flex-col md:items-start items-start justify-center">
                       <h1 className="text-[70px] font-semibold">Designer</h1>
 
