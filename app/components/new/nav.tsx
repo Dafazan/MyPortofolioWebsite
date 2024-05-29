@@ -50,7 +50,9 @@ function Navbary() {
     <div className="fixed w-full flex justify-center py-3 md:px-16 px-3 z-50">
       <div
         className={`${
-          scrollLocation >= 677 ? "bgblur" : "bg-[#141414]"
+          scrollLocation >= 677 || scrollLocation <= 100
+            ? "bgblur"
+            : "bg-[#141414]"
         } duration-100 w-full h-16 rounded-sm border border-[#6e604d] flex justify-between items-center px-3 text-[#e0c49c]  `}
       >
         <div className="md:text-4xl text-xl font-thin">

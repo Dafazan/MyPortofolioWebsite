@@ -60,8 +60,8 @@ function Contacts() {
     <>
       <NavbaryS />
       <div className=" w-full h-screen md:p-16 p-3 pt-30 text-[#e0c49c] flex flex-col">
-        <div className="h-24"></div>
-        <h3 className="text-[44px] font-extrabold leading-[50px]">
+        <div className="md:h-24 h-52"></div>
+        <h3 className="text-[44px] pt-20 md:pt-0 font-extrabold leading-[50px]">
           GOT A PROJECT?
         </h3>
         <form
@@ -219,7 +219,7 @@ function Contacts() {
             </div>
           </div>
         </form>
-        <div className="flex w-full h-full  justify-center items-center">
+        <div className="flex w-full h-full  justify-center items-center pt-5 pb-10">
           <Sociallinks />
         </div>
       </div>

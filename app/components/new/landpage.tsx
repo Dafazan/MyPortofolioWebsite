@@ -3,8 +3,62 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { isMobile } from "react-device-detect";
 import CursorFollowBox from "./cursorfollowbox";
+import { useRouter } from "next/router";
 
 function Landpage() {
+  const [scrollLocation, setScrollLocation] = useState(0);
+  const [prevScrollLocation, setPrevScrollLocation] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollLocation = window.scrollY;
+      setScrollLocation(currentScrollLocation);
+
+      // Check if scrollLocation is decreasing
+      if (currentScrollLocation < prevScrollLocation) {
+        // Scroll location is decreasing
+        setScrollDirection("up");
+      } else if (currentScrollLocation > prevScrollLocation) {
+        // Scroll location is increasing
+        setScrollDirection("down");
+      }
+
+      // Update prevScrollLocation with currentScrollLocation
+      setPrevScrollLocation(currentScrollLocation);
+    };
+
+    // Add event listener when component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove event listener when component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollLocation]);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout | null = null;
+    if (isMobile && scrollLocation <= 600) {
+      interval = setInterval(() => {
+        setHoverstate((prevState) => (prevState + 1) % 3); // Cycling through 0, 1, 2
+      }, 1000);
+    }
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [scrollLocation]);
+
+  //if (!isMobile) return null;
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const loader = document.getElementById("globalLoader");
+      if (loader) loader.remove();
+    }
+  }, []);
+
   const [hoverstate, setHoverstate] = useState(0);
 
   const targetRef = useRef<HTMLDivElement>(null);
@@ -23,6 +77,12 @@ function Landpage() {
 
   return (
     <div className="w-full h-full relative nocursor">
+      <div className="" id="globalLoader">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"
+          alt=""
+        />
+      </div>
       <div className="vignette w-screen h-screen absolute">
         {hoverstate == 1 ? (
           <>
