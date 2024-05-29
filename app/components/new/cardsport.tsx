@@ -18,7 +18,7 @@ function Cardsport({
       className="rounded-sm border border-[#e0c49c] w-full h-[400px] overflow-hidden relative"
     >
       <img
-        className="w-full h-full object-cover object-center absolute opacity-75"
+        className="w-full h-full object-cover object-center absolute "
         src={image}
         alt="a"
       />

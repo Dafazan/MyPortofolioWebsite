@@ -7,8 +7,8 @@ function Home() {
   return (
     <>
   <Navbary />
-    <div className='md:px-16 px-3 py-10'>
     <Landpage/>
+    <div className='md:px-16 px-3 py-10'>
    <Selectedworks/>
     </div>
     </>
