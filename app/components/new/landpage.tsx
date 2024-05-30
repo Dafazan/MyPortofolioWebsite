@@ -110,26 +110,32 @@ function Landpage() {
           </>
         )} */}
         <div className="flex w-screen h-screen justify-between">
-          <img
-            className={`w-full h-full object-cover ${
-              hoverstate === 1 ? "w-11/12" : "w-1/12"
-            }  h-full opacity-50 duration-200`}
-            src="/des.png"
-            alt="no"
+          <div
+            style={{
+              backgroundImage: `url('/des.png')`,
+              // or any other height you need
+            }}
+            className={`w-full bg-red-900 h-full bg-cover ${
+              hoverstate === 1 ? "w-[96%]" : "w-[4%]"
+            } opacity-50 duration-200`}
           />
-          <img
-            className={`w-full h-full object-cover ${
-              hoverstate === 0 ? "w-11/12" : "w-1/12"
-            }  h-full opacity-50 duration-200`}
-            src="/id.png"
-            alt="no"
+          <div
+            style={{
+              backgroundImage: `url('/id.png')`,
+              // or any other height you need
+            }}
+            className={`w-full bg-red-300 h-full bg-cover ${
+              hoverstate === 0 ? "w-[96%]" : "w-[4%]"
+            } opacity-50 duration-200`}
           />
-          <img
-            className={`w-full h-full object-cover ${
-              hoverstate === 2 ? "w-11/12" : "w-1/12"
-            }  h-full opacity-50 duration-200`}
-            src="/dev.png"
-            alt="no"
+          <div
+            style={{
+              backgroundImage: `url('/dev.png')`,
+              // or any other height you need
+            }}
+            className={`w-full bg-red-900 h-full bg-cover ${
+              hoverstate === 2 ? "w-[96%]" : "w-[4%]"
+            } opacity-50 duration-200`}
           />
         </div>
       </div>
