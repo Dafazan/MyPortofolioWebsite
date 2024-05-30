@@ -37,18 +37,18 @@ function Landpage() {
     };
   }, [prevScrollLocation]);
 
-  useEffect(() => {
-    let interval: NodeJS.Timeout | null = null;
-    if (isMobile && scrollLocation <= 600) {
-      interval = setInterval(() => {
-        setHoverstate((prevState) => (prevState + 1) % 3); // Cycling through 0, 1, 2
-      }, 1000);
-    }
+  // useEffect(() => {
+  //   let interval: NodeJS.Timeout | null = null;
+  //   if (isMobile && scrollLocation <= 600) {
+  //     interval = setInterval(() => {
+  //       setHoverstate((prevState) => (prevState + 1) % 3); // Cycling through 0, 1, 2
+  //     }, 1000);
+  //   }
 
-    return () => {
-      if (interval) clearInterval(interval);
-    };
-  }, [scrollLocation]);
+  //   return () => {
+  //     if (interval) clearInterval(interval);
+  //   };
+  // }, [scrollLocation]);
 
   //if (!isMobile) return null;
 
@@ -84,19 +84,19 @@ function Landpage() {
         />
       </div>
       <div className="vignette w-screen h-screen absolute">
-        {hoverstate == 1 ? (
+        {/* {hoverstate === 1 ? (
           <>
             <img
               className="w-full h-full object-cover opacity-50"
-              src="/des.png"
+              src="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/des.png?alt=media&token=a33b9485-4d6f-47fd-b535-927b42e77966"
               alt="no"
             />
           </>
-        ) : hoverstate == 2 ? (
+        ) : hoverstate === 2 ? (
           <>
             <img
               className="w-full h-full object-cover opacity-50"
-              src="/dev.png"
+              src="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/dev.png?alt=media&token=557b647c-d98b-4841-9596-b5ac2e8ace6c"
               alt="no"
             />
           </>
@@ -104,10 +104,29 @@ function Landpage() {
           <>
             <img
               className="w-full h-full object-cover opacity-50"
-              src="/id.png"
+              src="https://firebasestorage.googleapis.com/v0/b/project-insight-fd427.appspot.com/o/id.png?alt=media&token=dfb0333d-b15a-4364-a681-6d70d5190626"
               alt="no"
             />
           </>
+        )} */}
+        {hoverstate === 1 ? (
+          <img
+            className="w-full h-full object-cover opacity-50"
+            src="/des.png"
+            alt="no"
+          />
+        ) : hoverstate === 2 ? (
+          <img
+            className="w-full h-full object-cover opacity-50"
+            src="/dev.png"
+            alt="no"
+          />
+        ) : (
+          <img
+            className="w-full h-full object-cover opacity-50"
+            src="/id.png"
+            alt="no"
+          />
         )}
       </div>
       <div className=" overflow-x-hidden  text-[#e0c49c]  ">
