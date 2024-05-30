@@ -109,25 +109,29 @@ function Landpage() {
             />
           </>
         )} */}
-        {hoverstate === 1 ? (
+        <div className="flex w-screen h-screen justify-between">
           <img
-            className="w-full h-full object-cover opacity-50"
+            className={`w-full h-full object-cover ${
+              hoverstate === 1 ? "w-11/12" : "w-1/12"
+            }  h-full opacity-50 duration-200`}
             src="/des.png"
             alt="no"
           />
-        ) : hoverstate === 2 ? (
           <img
-            className="w-full h-full object-cover opacity-50"
-            src="/dev.png"
-            alt="no"
-          />
-        ) : (
-          <img
-            className="w-full h-full object-cover opacity-50"
+            className={`w-full h-full object-cover ${
+              hoverstate === 0 ? "w-11/12" : "w-1/12"
+            }  h-full opacity-50 duration-200`}
             src="/id.png"
             alt="no"
           />
-        )}
+          <img
+            className={`w-full h-full object-cover ${
+              hoverstate === 2 ? "w-11/12" : "w-1/12"
+            }  h-full opacity-50 duration-200`}
+            src="/dev.png"
+            alt="no"
+          />
+        </div>
       </div>
       <div className=" overflow-x-hidden  text-[#e0c49c]  ">
         <div className="w-full h-full  md:px-16 px-3 py-10">
