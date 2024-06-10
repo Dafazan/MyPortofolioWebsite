@@ -12,6 +12,9 @@ body {
 .nocursor {
   cursor: none;
 }
+.wcursor {
+  cursor: pointer;
+}
 
 /* CSS */
 /* Hide the scrollbar track */
