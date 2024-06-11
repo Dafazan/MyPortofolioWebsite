@@ -57,12 +57,13 @@ function Mail() {
   };
 
   return (
-    <div className=" w-full h-screen   text-[#e0c49c] flex flex-col">
+    <div className=" w-full h-screen text-[#e0c49c] flex flex-col">
       <div className="md:h-24 h-52"></div>
-      <h3 className="text-[44px]  font-extrabold ">GOT A PROJECT?</h3>
+
+      <h3 className="text-[44px]  font-extrabold  z-40">GOT A PROJECT?</h3>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col md:flex-row mt-10 md:gap-16"
+        className="flex flex-col md:flex-row mt-10 md:gap-16 z-40"
       >
         <div className="md:w-3/6 w-full flex flex-col gap-2">
           <div className="w-full">
@@ -74,7 +75,7 @@ function Mail() {
                 type="text"
                 name="services"
                 onChange={handleChange}
-                className="rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c] cursor-pointer pr-8"
+                className=" rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c] cursor-pointer pr-8"
                 placeholder="Select an option..."
                 onClick={toggleDropdown}
                 value={selectedOption}
@@ -150,7 +151,7 @@ function Mail() {
             <input
               required
               type="text"
-              className="rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c]"
+              className="rounded-sm  border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c]"
               name="name"
               value={formData.name}
               onChange={handleChange}
@@ -161,7 +162,7 @@ function Mail() {
             <input
               required
               type="text"
-              className="rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c]"
+              className="rounded-sm  border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c]"
               name="email"
               value={formData.email}
               onChange={handleChange}
@@ -171,7 +172,7 @@ function Mail() {
             <p className="text-[14px] font-bold">PHONE NUMBER</p>
             <input
               type="text"
-              className="rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c]"
+              className="rounded-sm  border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c]"
               name="number"
               value={formData.number}
               onChange={handleChange}
@@ -184,7 +185,7 @@ function Mail() {
             <input
               required
               type="text"
-              className="rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c]"
+              className="rounded-sm  border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c]"
               name="subject"
               value={formData.subject}
               onChange={handleChange}
@@ -195,7 +196,7 @@ function Mail() {
             <textarea
               required
               rows={4}
-              className="rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full focus:outline-none outnone focus:border-[#e0c49c]"
+              className="rounded-sm  border-[#e0c49c] text-[16px] bg-transparent w-full focus:outline-none outnone focus:border-[#e0c49c]"
               name="message"
               value={formData.message}
               onChange={handleChange}
