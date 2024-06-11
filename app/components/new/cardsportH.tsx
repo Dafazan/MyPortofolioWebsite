@@ -5,10 +5,12 @@ function CardsportH({
   image,
   title,
   type,
+  link,
 }: {
   image: string;
   title: string;
   type: string;
+  link: string;
 }) {
   const [hoverstate, setHoverstate] = useState(0);
   return (
