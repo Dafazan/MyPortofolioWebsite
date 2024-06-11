@@ -5,7 +5,7 @@ import { isMobile } from "react-device-detect";
 import CursorFollowBox from "./cursorfollowbox";
 import { useRouter } from "next/router";
 
-function Landpage() {
+function Landpage2() {
   const [scrollLocation, setScrollLocation] = useState(0);
   const [prevScrollLocation, setPrevScrollLocation] = useState(0);
   const [scrollDirection, setScrollDirection] = useState<string | null>(null);
@@ -74,46 +74,10 @@ function Landpage() {
   useEffect(() => {
     setIsClient(true);
   }, []);
-  let translateY: string | number = 0;
-
-  if (scrollLocation >= 1700) {
-    translateY = "90vh";
-  } else if (scrollLocation >= 454) {
-    translateY = "50vh";
-  }
 
   return (
     <div className="w-full h-full relative ">
-      {scrollLocation >= 454 ? <></> : null}
-      <motion.div
-        initial={{ y: 0 }}
-        animate={{ y: translateY }}
-        transition={{ type: "spring", stiffness: 100 }}
-        className={`z-50 flex w-screen h-screen fixed justify-center items-start pointer-events-none ${
-          scrollLocation >= 454 ? "block" : "hidden"
-        }`}
-      >
-        <a
-          className="pointer-events-auto text-xl font-medium bg-[#e0c49c] text-[#141414] px-2 py-1 rounded-sm hover:tracking-widest duration-300"
-          href="/portofolio"
-        >
-          SEE WORKS I HAVE DONE
-        </a>
-      </motion.div>
-      <div className="" id="globalLoader">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"
-          alt=""
-        />
-      </div>
-      <div className="vignette w-screen h-screen absolute z-0 opacity-30">
-        <img
-          className="w-full h-full object-cover opacity-50"
-          src="/id.png"
-          alt="no"
-        />
-      </div>
-      <div className=" overflow-x-hidden  text-[#e0c49c]  z-20">
+      <div className=" overflow-x-hidden  text-[#e0c49c]  ">
         <div className="w-full h-full  md:px-16 px-3 py-10">
           <CursorFollowBox />
           {isClient ? (
@@ -149,7 +113,7 @@ function Landpage() {
                       </a>
                     </div>
                     <div className="px-5 pb-20 h-full flex flex-col justify-end">
-                      <div className="-translate-y-10" onClick={handleScroll}>
+                      <div onClick={handleScroll}>
                         <svg
                           width="30"
                           height="60"
@@ -232,9 +196,7 @@ function Landpage() {
                         onMouseEnter={() => setHoverstate(3)}
                         onMouseLeave={() => setHoverstate(0)}
                         onClick={handleScroll}
-                        className={`z-40 ${
-                          scrollLocation <= 400 ? "block" : "hidden"
-                        }`}
+                        className="z-40"
                       >
                         <motion.svg
                           animate={hoverstate === 3 ? { y: 5 } : { y: -10 }}
@@ -287,7 +249,7 @@ function Landpage() {
                       <div
                         className={`${
                           hoverstate == 2 ? "rotate-45" : ""
-                        } duration-200 `}
+                        } duration-200`}
                       >
                         <svg
                           className=""
@@ -323,4 +285,4 @@ function Landpage() {
   );
 }
 
-export default Landpage;
+export default Landpage2;
