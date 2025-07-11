@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+
+@font-face {
+  font-family: 'Boldonse';
+  src: url('/assets/fonts/Boldonse-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
-  background: #141414;
-  background-color: #141414;
-  color: #e0c49c;
+  background: #000000;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 .nocursor {
@@ -77,4 +87,91 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+.boldonse-regular {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+@layer utilities {
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
+  }
+
+  .animate-aurora {
+    animation: aurora 60s linear infinite;
+  }
+}
+
+@layer utilities {
+  :root {
+    --animate-first: moveVertical 30s ease infinite;
+    --animate-second: moveInCircle 20s reverse infinite;
+    --animate-third: moveInCircle 40s linear infinite;
+    --animate-fourth: moveHorizontal 40s ease infinite;
+    --animate-fifth: moveInCircle 20s ease infinite;
+  }
+
+  @keyframes moveHorizontal {
+    0% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+    50% {
+      transform: translateX(50%) translateY(10%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+  }
+
+  @keyframes moveInCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes moveVertical {
+    0% {
+      transform: translateY(-50%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+  /* Example usage class */
+  .animate-first {
+    animation: var(--animate-first);
+  }
+
+  .animate-second {
+    animation: var(--animate-second);
+  }
+
+  .animate-third {
+    animation: var(--animate-third);
+  }
+
+  .animate-fourth {
+    animation: var(--animate-fourth);
+  }
+
+  .animate-fifth {
+    animation: var(--animate-fifth);
+  }
 }
