@@ -47,13 +47,9 @@ function Navbary() {
   }, [prevScrollLocation]);
 
   return (
-    <div className="fixed w-full flex justify-center py-3 md:px-16 px-3 z-50">
+    <div className="fixed w-full flex justify-center  z-50">
       <div
-        className={`${
-          scrollLocation >= 677 || scrollLocation <= 100
-            ? "bgblur"
-            : "bg-[#141414]"
-        } duration-100 w-full h-16 rounded-sm border border-[#6e604d] flex justify-between items-center px-3 text-[#e0c49c]  `}
+        className={`duration-100 w-full h-16 rounded-sm px-12 flex justify-between items-center text-[#e0c49c]  `}
       >
         <div className="md:text-4xl text-xl font-thin">
           <a className="hover:text-[#ffe6c2]" href="/#">

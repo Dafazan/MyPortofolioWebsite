@@ -9,6 +9,7 @@ import { Parallax } from 'react-parallax';
 import { LampContainer } from '@/app/components/ui/lamp';
 import Portocard from '../components/ui/portocard';
 import Contacts from '../contacts/page';
+import Menu from '../components/menu/menu';
 function HomePage() {
 
     const [hovered, setHovered] = useState(0);
@@ -29,8 +30,9 @@ function HomePage() {
 
     return (
         <ReactLenis root>
+            <Menu />
             <div className='absolute w-full'>
-                <div className=' fixed h-screen w-screen flex flex-col justify-center bg-white'>
+                <div className='fixed h-screen w-screen flex flex-col justify-center bg-white'>
 
                     <img
                         src="/assets/dw.webp"
@@ -143,10 +145,37 @@ function HomePage() {
                                 </div>
                                 <div className='md:w-[50%] w-full md:ps-10 p-0 '>
                                     <div className='w-full md:h-[70vh] h-[50vh]  flex gap-1'>
-                                        <div className='w-full h-full bg-blue-600'></div>
                                         <div className='w-full h-full flex flex-col gap-1'>
-                                            <div className='w-full h-[70%] bg-red-400'></div>
-                                            <div className='w-full h-[30%]  bg-red-200'></div>
+                                            <div className='w-full h-[40%] bg-red-400'>
+                                                <img
+                                                    src="DSC07040.webp"
+                                                    alt="d"
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </div>
+                                            <div className='w-full h-[60%]  bg-red-200'>
+                                                <img
+                                                    src="DSC07054.webp"
+                                                    alt="d"
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className='w-full h-full flex flex-col gap-1'>
+                                            <div className='w-full h-[70%] bg-red-400'>
+                                                <img
+                                                    src="DSC07048.webp"
+                                                    alt="d"
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </div>
+                                            <div className='w-full h-[30%]  bg-red-200'>
+                                                <img
+                                                    src="DSC07042.webp"
+                                                    alt="d"
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -155,7 +184,7 @@ function HomePage() {
                     </div>
                     <div className="flex flex-col gap-32 bg-black">
                         <div className='w-full  bg-black md:px-12 px-2 '>
-                            <div className='flex justify-end w-full md:pb-5'>
+                            <div className='flex justify-end w-full pb-5'>
                                 <h1 className='boldonse-regular text-white text-xl  md:text-5xl '>HIGHLIGHTED WORKS</h1>
                             </div>
                             <div className=' w-full grid md:grid-cols-3 grid-cols-1 gap-5'>

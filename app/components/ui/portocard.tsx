@@ -4,7 +4,13 @@ function Portocard() {
     return (
         <>
             <div className=' w-full  border-b border-white'>
-                <div className='h-52 w-full bg-violet-500 '></div>
+                <div className='h-52 w-full bg-red-950 '>
+                    <img
+                        src="/assets/dw.webp"
+                        alt="d"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
                 <div className='flex justify-between'>
                     <p className='font-thin'>AKSARA DAN RASA (2025)</p>
                     <div className='flex flex-col font-thin'>

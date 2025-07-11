@@ -58,7 +58,7 @@ function Contacts() {
 
   return (
     <>
-      <NavbaryS />
+
       <div className=" w-full h-screen  text-[#fefefe] flex flex-col">
 
         <form
