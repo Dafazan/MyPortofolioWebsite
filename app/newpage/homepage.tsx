@@ -7,6 +7,8 @@ import { BackgroundGradientAnimation } from "@/app/components/ui/background-grad
 import { TextHoverEffect } from "@/app/components/ui/text-hover-effect";
 import { Parallax } from 'react-parallax';
 import { LampContainer } from '@/app/components/ui/lamp';
+import Portocard from '../components/ui/portocard';
+import Contacts from '../contacts/page';
 function HomePage() {
 
     const [hovered, setHovered] = useState(0);
@@ -58,7 +60,7 @@ function HomePage() {
                     <div className='md:h-[60vh] h-[10vh]'></div>
                     <div className='h-screen bg-black'>
                         <div className=' h-full flex flex-col justify-center'>
-                            <div className=' px-12 md:flex flex-col'>
+                            <div className=' md:px-12 px-2 flex md:flex-row flex-col md:gap-0 gap-5 items-center'>
                                 <div className='md:w-[50%] w-full'>
                                     <div className='flex flex-col text-xl text-white'>
                                         <a
@@ -71,7 +73,7 @@ function HomePage() {
                                                 <div className={`absolute inset-0  z-0  py-3 duration-300 ${hovered === 1 ? 'bg-white w-full' : 'w-0'}`} />
 
                                                 {/* Text layer */}
-                                                <div className="relative z-10 px-4 py-2 border-white  border-t">
+                                                <div className="relative z-10 md:px-4 px-2 py-2 border-white  border-t">
                                                     <p className={`${hovered === 1 ? `text-black` : `text-white`}`}>UI / UX DESIGNER</p>
                                                 </div>
                                             </div>
@@ -87,7 +89,7 @@ function HomePage() {
                                                 <div className={`absolute inset-0  z-0  py-3 duration-300 ${hovered === 2 ? 'bg-white w-full' : 'w-0'}`} />
 
                                                 {/* Text layer */}
-                                                <div className="relative z-10 px-4 py-2 border-white  border-t">
+                                                <div className="relative z-10 md:px-4 px-2 py-2 border-white  border-t">
                                                     <p className={`${hovered === 2 ? `text-black` : `text-white`}`}>GRAPHIC DESIGNER</p>
                                                 </div>
                                             </div>
@@ -102,7 +104,7 @@ function HomePage() {
                                                 <div className={`absolute inset-0  z-0  py-3 duration-300 ${hovered === 3 ? 'bg-white w-full' : 'w-0'}`} />
 
                                                 {/* Text layer */}
-                                                <div className="relative z-10 px-4 py-2 border-white  border-t">
+                                                <div className="relative z-10 md:px-4 px-2 py-2 border-white  border-t">
                                                     <p className={`${hovered === 3 ? `text-black` : `text-white`}`}>WEBSITE DEVELOPER</p>
                                                 </div>
                                             </div>
@@ -117,7 +119,7 @@ function HomePage() {
                                                 <div className={`absolute inset-0  z-0  py-3 duration-300 ${hovered === 4 ? 'bg-white w-full' : 'w-0'}`} />
 
                                                 {/* Text layer */}
-                                                <div className="relative z-10 px-4 py-2 border-white  border-t">
+                                                <div className="relative z-10 md:px-4 px-2 py-2 border-white  border-t">
                                                     <p className={`${hovered === 4 ? `text-black` : `text-white`}`}>3D AND ANIMATIONS</p>
                                                 </div>
                                             </div>
@@ -132,23 +134,53 @@ function HomePage() {
                                                 <div className={`absolute inset-0  z-0  py-3 duration-300 ${hovered === 5 ? 'bg-white w-full' : 'w-0'}`} />
 
                                                 {/* Text layer */}
-                                                <div className="relative z-10 px-4 py-2 border-white  border-y">
+                                                <div className="relative z-10 md:px-4 px-2 py-2 border-white  border-y">
                                                     <p className={`${hovered === 5 ? `text-black` : `text-white`}`}>FILMMAKING</p>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
-                                <div className='md:w-[50%] w-full'>
-
+                                <div className='md:w-[50%] w-full md:ps-10 p-0 '>
+                                    <div className='w-full md:h-[70vh] h-[50vh]  flex gap-1'>
+                                        <div className='w-full h-full bg-blue-600'></div>
+                                        <div className='w-full h-full flex flex-col gap-1'>
+                                            <div className='w-full h-[70%] bg-red-400'></div>
+                                            <div className='w-full h-[30%]  bg-red-200'></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div className="flex flex-col gap-32 bg-black">
+                        <div className='w-full  bg-black md:px-12 px-2 '>
+                            <div className='flex justify-end w-full md:pb-5'>
+                                <h1 className='boldonse-regular text-white text-xl  md:text-5xl '>HIGHLIGHTED WORKS</h1>
+                            </div>
+                            <div className=' w-full grid md:grid-cols-3 grid-cols-1 gap-5'>
+                                <Portocard />
+                                <Portocard />
+                                <Portocard />
+                                <Portocard />
+                                <Portocard />
+                                <Portocard />
+                            </div>
+                        </div>
+                        <div className='w-full  bg-black md:px-12 px-2 '>
+                            <div className='flex justify-start w-full md:pb-5'>
+                                <h1 className='boldonse-regular text-white text-xl  md:text-5xl '>GET IN TOUCH</h1>
+                            </div>
+                            <div className=' w-full '>
+                                <Contacts />
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
-                <div className='h-screen pointer-events-none bottom-0 w-screen flex justify-start items-end p-12 relative'>
-                    <div className='flex md:flex-row flex-col md:gap-5 md:items-end'>
+                <div className='h-screen pointer-events-none bottom-0 w-screen flex justify-start items-end md:p-12 p-2 relative'>
+                    <div className='flex md:flex-row flex-col md:gap-5 md:items-end md:pb-0 pb-20'>
                         <h1 className='boldonse-regular text-white text-4xl  -translate-y-[15px] md:text-8xl'>DAFAZAN</h1>
                         <div className='flex gap-5 pointer-events-auto'>
 

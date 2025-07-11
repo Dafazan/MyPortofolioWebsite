@@ -59,11 +59,8 @@ function Contacts() {
   return (
     <>
       <NavbaryS />
-      <div className=" w-full h-screen md:p-16 p-3 pt-30 text-[#e0c49c] flex flex-col">
-        <div className="md:h-24 h-52"></div>
-        <h3 className="text-[44px] pt-20 md:pt-0 font-extrabold leading-[50px]">
-          GOT A PROJECT?
-        </h3>
+      <div className=" w-full h-screen  text-[#fefefe] flex flex-col">
+
         <form
           onSubmit={handleSubmit}
           className="flex flex-col md:flex-row mt-10 md:gap-16"
@@ -78,7 +75,7 @@ function Contacts() {
                   type="text"
                   name="services"
                   onChange={handleChange}
-                  className="rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c] cursor-pointer pr-8"
+                  className="rounded-sm border-[#fefefe] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#fefefe] cursor-pointer pr-8"
                   placeholder="Select an option..."
                   onClick={toggleDropdown}
                   value={selectedOption}
@@ -90,9 +87,8 @@ function Contacts() {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className={`h-6 w-6 transition-transform ${
-                      isOpen ? "transform rotate-180" : ""
-                    }`}
+                    className={`h-6 w-6 transition-transform ${isOpen ? "transform rotate-180" : ""
+                      }`}
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -111,35 +107,35 @@ function Contacts() {
                     animate={{ scaleY: 1, transformOrigin: "top" }}
                     exit={{ scaleY: 0, transformOrigin: "top" }}
                     transition={{ duration: 0.2 }}
-                    className="absolute z-10 mt-2 bg-[#e0c49c] shadow-lg w-full"
+                    className="absolute z-10 mt-2 bg-[#fefefe] shadow-lg w-full"
                   >
                     <ul>
                       <li
-                        className="px-4 py-1 text-[#6e604d] hover:text-[#e0c49c] hover:bg-[#6e604d] cursor-pointer border-b border-[#6e604d]"
+                        className="px-4 py-1 text-[#000] hover:text-[#fefefe] hover:bg-[#000] cursor-pointer border-b border-[#ffffff]"
                         onClick={() => selectOption("GENERAL")}
                       >
                         GENERAL
                       </li>
                       <li
-                        className="px-4 py-1 text-[#6e604d] hover:text-[#e0c49c] hover:bg-[#6e604d] cursor-pointer border-b border-[#6e604d]"
+                        className="px-4 py-1 text-[#000] hover:text-[#fefefe] hover:bg-[#000] cursor-pointer border-b border-[#ffffff]"
                         onClick={() => selectOption("3D MODELLING")}
                       >
                         3D MODELLING/VISUALIZATION
                       </li>
                       <li
-                        className="px-4 py-1 text-[#6e604d] hover:text-[#e0c49c] hover:bg-[#6e604d] cursor-pointer border-b border-[#6e604d]"
+                        className="px-4 py-1 text-[#000] hover:text-[#fefefe] hover:bg-[#000] cursor-pointer border-b border-[#ffffff]"
                         onClick={() => selectOption("UI/UX DESIGN")}
                       >
                         UI/UX DESIGNING
                       </li>
                       <li
-                        className="px-4 py-1 text-[#6e604d] hover:text-[#e0c49c] hover:bg-[#6e604d] cursor-pointer border-b border-[#6e604d]"
+                        className="px-4 py-1 text-[#000] hover:text-[#fefefe] hover:bg-[#000] cursor-pointer border-b border-[#ffffff]"
                         onClick={() => selectOption("WEB APP DEV")}
                       >
                         WEBSITE & APP DEVELOPMENT
                       </li>
                       <li
-                        className="px-4 py-1 text-[#6e604d] hover:text-[#e0c49c] hover:bg-[#6e604d] cursor-pointer border-b border-[#6e604d]"
+                        className="px-4 py-1 text-[#000] hover:text-[#fefefe] hover:bg-[#000] cursor-pointer border-b border-[#ffffff]"
                         onClick={() => selectOption("GAME DEV")}
                       >
                         GAME & SIMULATOR DEVELOPMENT
@@ -154,7 +150,7 @@ function Contacts() {
               <input
                 required
                 type="text"
-                className="rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c]"
+                className="rounded-sm border-[#fefefe] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#fefefe]"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
@@ -165,7 +161,7 @@ function Contacts() {
               <input
                 required
                 type="text"
-                className="rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c]"
+                className="rounded-sm border-[#fefefe] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#fefefe]"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -175,7 +171,7 @@ function Contacts() {
               <p className="text-[14px] font-bold">PHONE NUMBER</p>
               <input
                 type="text"
-                className="rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c]"
+                className="rounded-sm border-[#fefefe] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#fefefe]"
                 name="number"
                 value={formData.number}
                 onChange={handleChange}
@@ -188,7 +184,7 @@ function Contacts() {
               <input
                 required
                 type="text"
-                className="rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#e0c49c]"
+                className="rounded-sm border-[#fefefe] text-[16px] bg-transparent w-full h-10 focus:outline-none outnone focus:border-[#fefefe]"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
@@ -199,7 +195,7 @@ function Contacts() {
               <textarea
                 required
                 rows={4}
-                className="rounded-sm border-[#e0c49c] text-[16px] bg-transparent w-full focus:outline-none outnone focus:border-[#e0c49c]"
+                className="rounded-sm border-[#fefefe] text-[16px] bg-transparent w-full focus:outline-none outnone focus:border-[#fefefe]"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
@@ -208,7 +204,7 @@ function Contacts() {
             <div className="w-full h-full">
               <button
                 type="submit"
-                className="w-full h-full bg-[#e0c49c] hover:bg-[#ffe5c1] text-[#6e604d] text-[14px] font-bold flex justify-center items-center gap-2 hover:gap-4 duration-200 py-2"
+                className="w-full h-full bg-[#fefefe] hover:bg-[#000000] text-[#000000] hover:text-[#ffffff] hover:border border-white text-[14px] font-bold flex justify-center items-center gap-2 hover:gap-4 duration-200 py-2"
               >
                 {emailSent ? (
                   <p>Email successfully sent!</p>
@@ -219,7 +215,7 @@ function Contacts() {
             </div>
           </div>
         </form>
-        <div className="flex w-full h-full  justify-center items-center pt-5 pb-10">
+        <div className="flex w-full h-full  justify-center items-center pb-10">
           <Sociallinks />
         </div>
       </div>
