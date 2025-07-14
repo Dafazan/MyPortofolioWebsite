@@ -31,20 +31,8 @@ function HomePage() {
     return (
         <ReactLenis root>
 
-            <div className='absolute w-full'>
-                <div className='fixed h-screen w-screen flex flex-col justify-center bg-white'>
 
-                    <img
-                        src="/assets/dw.webp"
-                        alt="d"
-                        className="md:w-full h-full object-cover"
-                    />
-
-
-
-                </div>
-            </div>
-            <div className="relative">
+            <div className="">
                 <div className='absolute'>
 
                     <BackgroundGradientAnimation
@@ -59,7 +47,7 @@ function HomePage() {
                     >
 
                     </BackgroundGradientAnimation>
-                    <div className='md:h-[60vh] h-[10vh]'></div>
+                    <div className='bg-white h-[1px] w-full'></div>
                     <div className='h-screen bg-black'>
                         <div className=' h-full flex flex-col justify-center'>
                             <div className=' md:px-12 px-2 flex md:flex-row flex-col md:gap-0 gap-5 items-center'>
