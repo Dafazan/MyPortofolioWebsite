@@ -1,25 +1,29 @@
-import React from 'react'
+import React from 'react';
 
-function Portocard() {
-    return (
-        <>
-            <div className=' w-full  border-b border-white'>
-                <div className='h-52 w-full bg-red-950 '>
-                    <img
-                        src="/assets/dw.webp"
-                        alt="d"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
-                <div className='flex justify-between'>
-                    <p className='font-thin'>AKSARA DAN RASA (2025)</p>
-                    <div className='flex flex-col font-thin'>
-                        <p>Editor</p>
-                        <p>Gaffer</p>
-                    </div>
-                </div>
-            </div></>
-    )
+interface PortocardProps {
+    title: string;
+    roles: React.ReactNode;
+    img: string;
 }
 
-export default Portocard
+const Portocard: React.FC<PortocardProps> = ({ title, roles, img }) => {
+    return (
+        <div className='w-full border-b border-white'>
+            <div className='h-52 w-full bg-red-950'>
+                <img
+                    src={img}
+                    alt="portfolio thumbnail"
+                    className="w-full h-full object-cover"
+                />
+            </div>
+            <div className='flex justify-between'>
+                <p className='font-thin'>{title}</p>
+                <div className='flex flex-col font-thin'>
+                    {roles}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Portocard;
