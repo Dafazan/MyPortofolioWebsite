@@ -9,7 +9,7 @@ import { Parallax } from 'react-parallax';
 import { LampContainer } from '@/app/components/ui/lamp';
 import Portocard from '../components/ui/portocard';
 import Contacts from '../contacts/page';
-import Menu from '../components/menu/menu';
+
 function HomePage() {
 
     const [hovered, setHovered] = useState(0);
@@ -30,7 +30,7 @@ function HomePage() {
 
     return (
         <ReactLenis root>
-            <Menu />
+
             <div className='absolute w-full'>
                 <div className='fixed h-screen w-screen flex flex-col justify-center bg-white'>
 
