@@ -176,12 +176,12 @@ function HomePage() {
                                 <h1 className='boldonse-regular text-white text-xl  md:text-5xl '>HIGHLIGHTED WORKS</h1>
                             </div>
                             <div className=' w-full grid md:grid-cols-3 grid-cols-1 gap-5'>
-                                <Portocard />
-                                <Portocard />
-                                <Portocard />
-                                <Portocard />
-                                <Portocard />
-                                <Portocard />
+                                <Portocard img='/assets/dw.webp' title='QUN FILMS WEBSITE' roles={<><p className='font-thin'>WEB DEVELOPER</p></>} />
+                                <Portocard img='/assets/dw.webp' title='SAPTALOKA DIGITAL WEBSITE' roles={<><p className='font-thin'>UI/UX DESIGNER</p></>} />
+                                <Portocard img='/assets/dw.webp' title='PT. TELKOM INFRA ERP' roles={<><p className='font-thin'>UI/UX DESIGNER</p></>} />
+                                <Portocard img='/assets/dw.webp' title='PT. CBL ERP' roles={<><p className='font-thin'>UI/UX DESIGNER</p></>} />
+                                <Portocard img='/assets/dw.webp' title='PT. PLN ERP' roles={<><p className='font-thin'>UI/UX DESIGNER</p></>} />
+                                <Portocard img='/assets/dw.webp' title='IBADAHKU' roles={<><p className='font-thin'>UI/UX DESIGNER</p></>} />
                             </div>
                         </div>
                         <div className='w-full  bg-black md:px-12 px-2 '>
